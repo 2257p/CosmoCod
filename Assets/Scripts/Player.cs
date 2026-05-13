@@ -5,14 +5,17 @@ public class Player : MonoBehaviour
 {
 
     float walkSpd = 0.05f;
+
     Key upKey = Key.UpArrow;
     Key downKey = Key.DownArrow;
     Key leftKey = Key.LeftArrow;
     Key rightKey = Key.RightArrow;
     Key interactKey = Key.Z;
+    Key showInventoryKey = Key.E;
 
 
     bool inCutscene = false;
+
 
     void Start()
     {
