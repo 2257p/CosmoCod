@@ -5,7 +5,6 @@ public class FishCheck : MonoBehaviour
     private Rigidbody2D rb;
     private bool isInsideSquare = false;
     float enterTime = 0f;
-    public float speed = 3f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

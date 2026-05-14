@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    [Header("Keyboard Keys")]
     public Key jumpKey;
     private Rigidbody2D rb;
 
@@ -24,7 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
         jumpPressed = Keyboard.current[jumpKey].wasPressedThisFrame;
 
-        if (rb.position.y < 2)
+        if (rb.position.y < 1.50)
         {
             notCeiling = true;
         }
