@@ -24,14 +24,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
         jumpPressed = Keyboard.current[jumpKey].wasPressedThisFrame;
 
-        if (rb.position.y < 1)
+        if (rb.position.y < 2)
         {
             notCeiling = true;
         }
 
         if (jumpPressed && notCeiling)
         {
-             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 3f);     
+             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 4f);     
         }
     }
 }

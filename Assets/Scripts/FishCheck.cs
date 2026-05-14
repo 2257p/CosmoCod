@@ -1,14 +1,25 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class FishCheck : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool isInsideSquare = false;
+    float enterTime = 0f;
+    public float speed = 3f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (isInsideSquare)
+        {
+            if (Time.time - enterTime >= 1.5f)
+            {
+                Debug.Log("test");
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +27,7 @@ public class FishCheck : MonoBehaviour
         if (other.gameObject.CompareTag("Square"))
         {
             isInsideSquare = true;
-            StartCoroutine(CheckDuration());
+            enterTime = Time.time;
         }
     }
 
@@ -28,13 +39,11 @@ public class FishCheck : MonoBehaviour
         }
     }
 
-    IEnumerator CheckDuration()
+    void FixedUpdate()
     {
-        yield return new WaitForSeconds(3f);
-
-        if (isInsideSquare)
+        if (rb.position.y <= -2.25f)
         {
-            Debug.Log("test");
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 9f);
         }
     }
 }
