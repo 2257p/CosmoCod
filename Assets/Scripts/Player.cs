@@ -21,9 +21,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
         playerMovement();
-
     }
 
     private void playerMovement()
@@ -50,5 +48,4 @@ public class Player : MonoBehaviour
 
         }
     }
-
 }
