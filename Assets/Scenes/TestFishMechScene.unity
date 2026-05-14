@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 660361338}
   - component: {fileID: 660361340}
   - component: {fileID: 660361341}
+  - component: {fileID: 660361342}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
@@ -271,7 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206fd7c2cfa9647a5b8738360dcebcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishCheck
-  speed: 3
 --- !u!50 &660361341
 Rigidbody2D:
   serializedVersion: 5
@@ -299,6 +299,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &660361342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660361335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce352077e65c84da0b0a92278aec9313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishRandomizer
 --- !u!1 &694322766
 GameObject:
   m_ObjectHideFlags: 0

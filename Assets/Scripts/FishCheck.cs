@@ -5,9 +5,11 @@ public class FishCheck : MonoBehaviour
     private Rigidbody2D rb;
     private bool isInsideSquare = false;
     float enterTime = 0f;
+    FishRandomizer fishRandomizer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        fishRandomizer = FindFirstObjectByType<FishRandomizer>();
     }
 
     void Update()
@@ -16,7 +18,8 @@ public class FishCheck : MonoBehaviour
         {
             if (Time.time - enterTime >= 1.5f)
             {
-                Debug.Log("test");
+                fishRandomizer.Randomizer();
+                isInsideSquare = false;
             }
         }
     }
