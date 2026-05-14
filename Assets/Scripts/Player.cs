@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
     float walkSpd = 0.05f;
 
     Key upKey = Key.UpArrow;
@@ -11,44 +10,55 @@ public class Player : MonoBehaviour
     Key leftKey = Key.LeftArrow;
     Key rightKey = Key.RightArrow;
     Key interactKey = Key.Z;
-    Key showInventoryKey = Key.E;
-
 
     bool inCutscene = false;
 
+    public Rigidbody2D rb;
+    Vector2 move;
 
-    void Start()
-    {
-        
-    }
+    Shop nearbyShop;
 
     void Update()
     {
-        playerMovement();
-    }
+        move = Vector2.zero;
 
-    private void playerMovement()
-    {
-        if (inCutscene == false)
+        if (!inCutscene)
         {
             if (Keyboard.current[upKey].isPressed)
-            {
-                this.transform.position += Vector3.up * walkSpd;
-            }
+                move.y += 1;
             if (Keyboard.current[downKey].isPressed)
-            {
-                this.transform.position += Vector3.down * walkSpd;
-            }
-
+                move.y -= 1;
             if (Keyboard.current[rightKey].isPressed)
-            {
-                this.transform.position += Vector3.right * walkSpd;
-            }
+                move.x += 1;
             if (Keyboard.current[leftKey].isPressed)
-            {
-                this.transform.position += Vector3.left * walkSpd;
-            }
+                move.x -= 1;
 
+            if (Keyboard.current[interactKey].wasPressedThisFrame && nearbyShop != null)
+            {
+                nearbyShop.Interact();
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + move.normalized * walkSpd);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Shop shop))
+        {
+            nearbyShop = shop;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Shop shop))
+        {
+            if (nearbyShop == shop)
+                nearbyShop = null;
         }
     }
 }
