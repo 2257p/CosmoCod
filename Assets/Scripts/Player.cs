@@ -11,10 +11,10 @@ public class Player : MonoBehaviour
     Key leftKey = Key.LeftArrow;
     Key rightKey = Key.RightArrow;
     Key interactKey = Key.Z;
-    Key showInventoryKey = Key.E;
+    public static Key showInventoryKey = Key.E;
 
 
-    bool inCutscene = false;
+    public static bool inCutscene = false;
 
 
     void Start()

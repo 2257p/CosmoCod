@@ -5,9 +5,9 @@ public class Inventory : MonoBehaviour
 {
 
     //stuff pertaining to fish
-    private static int maxInventorySpace = 15;
+    public static int maxInventorySpace = 15;
     public int numberOfFish = 0;
-    public Fish[] inventory = new Fish[maxInventorySpace];
+    public static Fish[] inventory = new Fish[maxInventorySpace];
 
     //stuff pertaining to money
     public float money = 0f;
@@ -15,16 +15,17 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        /*
+        
         addFish(new Fish("Cod", 0, 8, 2));
-        addFish(new Fish("Salmon", 0, 6, 2.5f));
-        addFish(new Fish("Anglerfish", 2, 20, 4));
-        addFish(new Fish("Cod", 0, 3, 1));
+        addFish(new Fish("Salmon", 0, 6, 3));
+        addFish(new Fish("Salmon", 2, 8, 4));
+        addFish(new Fish("Cod", 0, 4, 1));
+        numberOfFish = 4;
 
         sortByValuePerMass();
 
-        Debug.Log(inventoryToString());
-        */
+        //Debug.Log(inventoryToString());
+        
 
     }
 
@@ -36,6 +37,7 @@ public class Inventory : MonoBehaviour
             if(f != null)
             {
                 r += f.getName();
+                r += " " + f.getValue();
                 r += ", ";
             }
         }
@@ -134,6 +136,15 @@ public class Inventory : MonoBehaviour
                         Fish temp = inventory[j];
                         inventory[j] = inventory[j + 1];
                         inventory[j + 1] = temp;
+                    }
+                    else if (inventory[j].getValue() / inventory[j].getMass() == inventory[j + 1].getValue() / inventory[j + 1].getMass())
+                    {
+                        if (inventory[j].getValue() > inventory[j + 1].getValue())
+                        {
+                            Fish temp = inventory[j];
+                            inventory[j] = inventory[j + 1];
+                            inventory[j + 1] = temp;
+                        }
                     }
                 }
             }

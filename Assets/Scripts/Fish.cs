@@ -28,7 +28,7 @@ public class Fish
 
     ~Fish()
     {
-        Debug.Log(_rarity + " fish destroyed");
+        Debug.Log(_name + " of value " + _value + " destroyed");
     } 
 
     public string getName() { return _name; }
