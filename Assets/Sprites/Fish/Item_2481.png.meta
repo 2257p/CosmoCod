@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec48dd220a406784ca5f9f3acdaa9fe0
+guid: da7fe22b71f37364ab2a362083fba890
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2562865790595579048
-    second: salmontestimage_0
+      213: 7337986634926516861
+    second: Item_2481_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: salmontestimage_0
+      name: Item_2481_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ac337f9bd0219320800000000000000
-      internalID: 2562865790595579048
+      spriteID: d7aeb5557f3c5d560800000000000000
+      internalID: 7337986634926516861
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      salmontestimage_0: 2562865790595579048
+      Item_2481_0: 7337986634926516861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

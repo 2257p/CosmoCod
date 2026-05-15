@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
         addFish(new Fish("Cod", 0, 4, 1));
         numberOfFish = 4;
 
-        sortByValuePerMass();
+        sortByValue();
 
         //Debug.Log(inventoryToString());
         
