@@ -14,9 +14,11 @@ public class Player : MonoBehaviour
     Key interactKey = Key.Z;
     public static Key showInventoryKey = Key.E;
 
-
     public static bool inCutscene = false;
 
+    //inventory stuff
+    public static int selectorX = 0;
+    public static int selectorY = 0;
 
     void Start()
     {
@@ -26,9 +28,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         playerMovement();
+
         if (Keyboard.current[interactKey].isPressed && inOcean == true)
         {
             Debug.Log("It works");
+        }
+
+        if (InventoryLoader.inventoryOpen == false)
+        {
+            playerMovement();
+        }
+        else if (InventoryLoader.inventoryOpen == true)
+        {
+            inventorySelection();
         }
     }
 
@@ -70,6 +82,33 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Ocean"))
         {
             inOcean = false;
+        }
+    }
+    
+    //selectorX ranges from 0 to 2
+    //selectorY ranges from 0 to -4
+    //InventoryLoader.inventoryFishSelector
+    private void inventorySelection()
+    {
+        if (Keyboard.current[rightKey].wasPressedThisFrame && selectorX < 2)
+        {
+            selectorX++;
+            InventoryLoader.inventoryFishSelector.transform.position += new Vector3(1, 0);
+        }
+        if (Keyboard.current[leftKey].wasPressedThisFrame && selectorX > 0)
+        {
+            selectorX--;
+            InventoryLoader.inventoryFishSelector.transform.position += new Vector3(-1, 0);
+        }
+        if (Keyboard.current[downKey].wasPressedThisFrame && selectorY > -4)
+        {
+            selectorY--;
+            InventoryLoader.inventoryFishSelector.transform.position += new Vector3(0, -1);
+        }
+        if (Keyboard.current[upKey].wasPressedThisFrame && selectorY < 0)
+        {
+            selectorY++;
+            InventoryLoader.inventoryFishSelector.transform.position += new Vector3(0, 1);
         }
     }
 }
