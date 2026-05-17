@@ -9,7 +9,7 @@ public class FishRandomizer : MonoBehaviour
     public void Randomizer()
     {
         int fishRank = UnityEngine.Random.Range(0, fishTypes.Length);
-        int selectedFish = fishTypes[num];
+        int selectedFish = fishTypes[fishRank];
 
         int fishScale = UnityEngine.Random.Range(0, 3);
         int fishSize = UnityEngine.Random.Range(0, 3);

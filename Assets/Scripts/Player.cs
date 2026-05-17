@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
 
-    float walkSpd = 0.05f;
+    float walkSpd = 0.005f;
+    bool inOcean = false;
 
     Key upKey = Key.UpArrow;
     Key downKey = Key.DownArrow;
@@ -25,6 +26,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         playerMovement();
+        if (Keyboard.current[interactKey].isPressed && inOcean == true)
+        {
+            Debug.Log("It works");
+        }
     }
 
     private void playerMovement()
@@ -49,6 +54,22 @@ public class Player : MonoBehaviour
                 this.transform.position += Vector3.left * walkSpd;
             }
 
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ocean"))
+        {
+            inOcean = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Ocean"))
+        {
+            inOcean = false;
         }
     }
 }

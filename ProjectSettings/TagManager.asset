@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Square
   - Fish
+  - Ocean
   layers:
   - Default
   - TransparentFX
