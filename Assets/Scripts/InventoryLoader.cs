@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InventoryLoader : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class InventoryLoader : MonoBehaviour
 
     public GameObject player;
     public static GameObject inventoryBg;
-    public bool inventoryOpen = false;
+    public static GameObject inventoryFishSelector;
+    public static bool inventoryOpen = false;
 
+    public Sprite inventoryFishSelectorSprite;
     public Sprite inventoryBgSprite;
     public Sprite codSprite;
     public Sprite salmonSprite;
@@ -36,8 +39,6 @@ public class InventoryLoader : MonoBehaviour
     {
 
         OpenCloseInventory();
-
-
 
     }
 
@@ -91,9 +92,16 @@ public class InventoryLoader : MonoBehaviour
         Color c = detailsPanel.GetComponent<SpriteRenderer>().color;
         c /= 2;
         detailsPanel.GetComponent<SpriteRenderer>().color = c;
-        detailsPanel.transform.position = inventoryBg.transform.position + new Vector3(5, 0);
+        detailsPanel.transform.position = inventoryBg.transform.position + new Vector3(4.5f, 0);
         detailsPanel.transform.parent = inventoryBg.transform;
 
+        //fish selector
+        inventoryFishSelector = new GameObject("Selector");
+        inventoryFishSelector.AddComponent<SpriteRenderer>();
+        inventoryFishSelector.GetComponent<SpriteRenderer>().sprite = inventoryFishSelectorSprite;
+        inventoryFishSelector.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        inventoryFishSelector.transform.position = inventoryBg.transform.position + new Vector3(-1, 2);
+        inventoryFishSelector.transform.parent = inventoryBg.transform;
 
         for (int i = 0; i < Inventory.maxInventorySpace; i++)
         {
@@ -108,7 +116,9 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = salmonSprite;
                     temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
                     temp.tag = "Fish";
                     temp.transform.position = inventoryBg.transform.position + new Vector3(-1, 2) + new Vector3(i%3, -i/3);
@@ -120,14 +130,16 @@ public class InventoryLoader : MonoBehaviour
 
                 }
 
-                if (Inventory.inventory[i].getName() == "Cod")
+                else if (Inventory.inventory[i].getName() == "Cod")
                 {
 
                     GameObject temp = new GameObject("Fish");
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
                     temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
                     temp.tag = "Fish";
                     temp.transform.position = inventoryBg.transform.position + new Vector3(-1, 2) + new Vector3(i%3, -i/3);
@@ -138,6 +150,11 @@ public class InventoryLoader : MonoBehaviour
                     temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
                 }
+
+
+
+
+                
 
             }
 

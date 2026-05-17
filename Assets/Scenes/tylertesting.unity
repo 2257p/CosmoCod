@@ -312,7 +312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 441828166}
   - component: {fileID: 441828165}
-  - component: {fileID: 441828167}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -370,7 +369,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24783905, g: 0.34121618, b: 0.4641509, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -394,52 +393,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &441828167
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441828164}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1116420301
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryLoader
   textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
   player: {fileID: 0}
-  inventoryOpen: 0
+  inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
   inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
   codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
   salmonSprite: {fileID: -3255037359050697509, guid: e0bb882ada50fd24e877cb8a5eb66cfb, type: 3}
@@ -577,6 +530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -406161950394188105, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5594061106140654331, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -627,28 +584,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6003342673416243571, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 110792088}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5594061106140654331, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4275566188962987393}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
---- !u!1 &4275566188962987392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5594061106140654331, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
-  m_PrefabInstance: {fileID: 4275566188962987391}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4275566188962987393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4275566188962987392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e88060cacfd4a4288ca7c3bc44f038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!4 &4275566188962987396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6003342673416243571, guid: 826d7e2b1b14c674b8032e7aea8c8d0e, type: 3}
