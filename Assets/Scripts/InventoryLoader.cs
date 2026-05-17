@@ -10,10 +10,14 @@ public class InventoryLoader : MonoBehaviour
     public GameObject player;
     public static GameObject inventoryBg;
     public static GameObject inventoryFishSelector;
+    public static GameObject detailsPanel;
+    public static GameObject sortingButton;
+    public static GameObject sortingText;
     public static bool inventoryOpen = false;
 
     public Sprite inventoryFishSelectorSprite;
     public Sprite inventoryBgSprite;
+    public Sprite sortingMethodSwitchButton;
     public Sprite codSprite;
     public Sprite salmonSprite;
 
@@ -39,6 +43,7 @@ public class InventoryLoader : MonoBehaviour
     {
 
         OpenCloseInventory();
+        SortingButtonDetect();
 
     }
 
@@ -49,7 +54,6 @@ public class InventoryLoader : MonoBehaviour
             
             if(Player.inCutscene == false && inventoryOpen == false)
             {
-
                 inventoryOpen = true;
                 inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
 
@@ -63,7 +67,48 @@ public class InventoryLoader : MonoBehaviour
         }
     }
 
+    void SortingButtonDetect()
+    {
+        if(Player.selectorX == 2 && Player.selectorY == 1 && Keyboard.current[Player.interactKey].wasPressedThisFrame)
+        {
+            if(Inventory.sortingMethod == 2)
+            {
+                Inventory.sortingMethod = 0;
+                Inventory.sortByValue();
+                sortingText.GetComponent<TMP_Text>().text = "Sort:\nValue";
+                reloadFish();
+            }
+            else if (Inventory.sortingMethod == 1)
+            {
+                Inventory.sortingMethod = 2;
+                Inventory.sortByValuePerMass();
+                sortingText.GetComponent<TMP_Text>().text = "Sort:\nValue/Mass";
+                reloadFish();
+            }
+            else if (Inventory.sortingMethod == 0)
+            {
+                Inventory.sortingMethod = 1;
+                Inventory.sortByMass();
+                sortingText.GetComponent<TMP_Text>().text = "Sort:\nMass";
+                reloadFish();
+            }
+        }
+    }
 
+    void reloadFish()
+    {
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        foreach(GameObject g in allObjects)
+        {
+            if (g.CompareTag("Fish"))
+            {
+                Destroy(g);
+            }
+        }
+
+        loadFish();
+
+    }
 
 
     void loadInventory()
@@ -76,23 +121,46 @@ public class InventoryLoader : MonoBehaviour
         Color t = inventoryBg.GetComponent<SpriteRenderer>().color;
         t /= 2;
         inventoryBg.GetComponent<SpriteRenderer>().color = t;
+        inventoryBg.transform.localScale = new Vector3(1.2f, 1);
         inventoryBg.transform.parent = player.transform;
         inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
 
         //inventory title
         GameObject inventoryTitle = Instantiate(textPrefab);
         inventoryTitle.transform.parent = inventoryBg.transform;
-        inventoryTitle.transform.position = inventoryBg.transform.position + new Vector3(-0.75f, 3f);
+        inventoryTitle.transform.position = inventoryBg.transform.position + new Vector3(-1.8f, 0f);
+        inventoryTitle.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+        inventoryTitle.transform.localScale = new Vector3(2f, 1.3f);
         inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
+        
 
-        //inventory details panel
-        GameObject detailsPanel = new GameObject("DetailsPanel");
+        //sort text
+        sortingText = Instantiate(textPrefab);
+        sortingText.transform.localScale = new Vector3(0.5f, 0.5f);
+        sortingText.transform.position = inventoryBg.transform.position + new Vector3(0.4f, 3f);
+        sortingText.transform.parent = inventoryBg.transform;
+        if(Inventory.sortingMethod == 0)
+        {
+            sortingText.GetComponent<TMP_Text>().text = "Sort:\nValue";
+        }
+        else if (Inventory.sortingMethod == 1)
+        {
+            sortingText.GetComponent<TMP_Text>().text = "Sort:\nMass";
+        }
+        else if (Inventory.sortingMethod == 2)
+        {
+            sortingText.GetComponent<TMP_Text>().text = "Sort:\nValue/Mass";
+        }
+
+
+            //inventory details panel
+            detailsPanel = new GameObject("DetailsPanel");
         detailsPanel.AddComponent<SpriteRenderer>();
         detailsPanel.GetComponent<SpriteRenderer>().sprite = inventoryBgSprite;
         Color c = detailsPanel.GetComponent<SpriteRenderer>().color;
         c /= 2;
         detailsPanel.GetComponent<SpriteRenderer>().color = c;
-        detailsPanel.transform.position = inventoryBg.transform.position + new Vector3(4.5f, 0);
+        detailsPanel.transform.position = inventoryBg.transform.position + new Vector3(5f, 0);
         detailsPanel.transform.parent = inventoryBg.transform;
 
         //fish selector
@@ -100,9 +168,24 @@ public class InventoryLoader : MonoBehaviour
         inventoryFishSelector.AddComponent<SpriteRenderer>();
         inventoryFishSelector.GetComponent<SpriteRenderer>().sprite = inventoryFishSelectorSprite;
         inventoryFishSelector.GetComponent<SpriteRenderer>().sortingOrder = 2;
-        inventoryFishSelector.transform.position = inventoryBg.transform.position + new Vector3(-1, 2);
+        inventoryFishSelector.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2);
         inventoryFishSelector.transform.parent = inventoryBg.transform;
 
+        //change sorting button
+        sortingButton = new GameObject("sortingButton");
+        sortingButton.AddComponent<SpriteRenderer>();
+        sortingButton.GetComponent<SpriteRenderer>().sprite = sortingMethodSwitchButton;
+        sortingButton.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        sortingButton.transform.localScale = new Vector3(0.6f, 0.6f);
+        sortingButton.transform.position = inventoryBg.transform.position + new Vector3(1.5f, 3);
+        sortingButton.transform.parent = inventoryBg.transform;
+
+        loadFish();
+        
+    }
+
+    void loadFish()
+    {
         for (int i = 0; i < Inventory.maxInventorySpace; i++)
         {
 
@@ -121,8 +204,8 @@ public class InventoryLoader : MonoBehaviour
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
                     temp.tag = "Fish";
-                    temp.transform.position = inventoryBg.transform.position + new Vector3(-1, 2) + new Vector3(i%3, -i/3);
-                    temp.transform.parent = inventoryBg.transform;
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
                     temp.AddComponent<SpriteRenderer>();
                     temp.GetComponent<SpriteRenderer>().sprite = salmonSprite;
                     temp.transform.localScale = new Vector3(2, 2);
@@ -142,8 +225,8 @@ public class InventoryLoader : MonoBehaviour
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
                     temp.tag = "Fish";
-                    temp.transform.position = inventoryBg.transform.position + new Vector3(-1, 2) + new Vector3(i%3, -i/3);
-                    temp.transform.parent = inventoryBg.transform;
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
                     temp.AddComponent<SpriteRenderer>();
                     temp.GetComponent<SpriteRenderer>().sprite = codSprite;
                     temp.transform.localScale = new Vector3(2, 2);
@@ -154,10 +237,11 @@ public class InventoryLoader : MonoBehaviour
 
 
 
-                
+
 
             }
 
         }
     }
+
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Fish has a composite relationship with Inventory (Fish objects get destroyed when inventory gets destroyed)
@@ -6,12 +7,14 @@ public class Inventory : MonoBehaviour
 
     //stuff pertaining to fish
     public static int maxInventorySpace = 15;
-    public int numberOfFish = 0;
+    public static int numberOfFish = 0;
     public static Fish[] inventory = new Fish[maxInventorySpace];
 
     //stuff pertaining to money
     public float money = 0f;
 
+    //stuff pertaining to inventory
+    public static int sortingMethod; //0 is value, 1 is mass, 2 is value/mass
 
     private void Start()
     {
@@ -85,8 +88,10 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public void sortByValue()
+    //sorting method 0
+    public static void sortByValue()
     {
+        sortingMethod = 0;
         for(int i = 0; i < maxInventorySpace - 1; i++)
         {
             for(int j = 0; j < maxInventorySpace - 1; j++)
@@ -104,8 +109,10 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void sortByMass()
+    //sorting method 1
+    public static void sortByMass()
     {
+        sortingMethod = 1;
         for (int i = 0; i < maxInventorySpace - 1; i++)
         {
             for (int j = 0; j < maxInventorySpace - 1; j++)
@@ -123,8 +130,10 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void sortByValuePerMass()
+    //sorting method 2
+    public static void sortByValuePerMass()
     {
+        sortingMethod = 2;
         for (int i = 0; i < maxInventorySpace - 1; i++)
         {
             for (int j = 0; j < maxInventorySpace - 1; j++)
