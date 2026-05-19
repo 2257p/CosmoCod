@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
-    float walkSpd = 0.005f;
+    float walkSpd = 0.05f;
     bool inOcean = false;
+    bool inShopArea = false;
 
     Key upKey = Key.UpArrow;
     Key downKey = Key.DownArrow;
@@ -21,19 +21,27 @@ public class Player : MonoBehaviour
     public static int selectorY = 0;
     public static bool upperButtons = false;
 
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-
-        //playerMovement();
-
-        if (Keyboard.current[interactKey].isPressed && inOcean == true)
+        if (Keyboard.current[interactKey].wasPressedThisFrame)
         {
-            Debug.Log("It works");
+            if (inOcean == true)
+            {
+                Debug.Log("It works");
+            }
+
+            if (inShopArea == true)
+            {
+                Shop.Interact();
+            }
         }
 
         if (InventoryLoader.inventoryOpen == false)
@@ -42,7 +50,16 @@ public class Player : MonoBehaviour
         }
         else if (InventoryLoader.inventoryOpen == true)
         {
+            moveInput = Vector2.zero;
             inventorySelection();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (InventoryLoader.inventoryOpen == false && inCutscene == false)
+        {
+            rb.MovePosition(rb.position + moveInput * walkSpd * Time.fixedDeltaTime);
         }
     }
 
@@ -50,24 +67,32 @@ public class Player : MonoBehaviour
     {
         if (inCutscene == false)
         {
+            float x = 0f;
+            float y = 0f;
+
             if (Keyboard.current[upKey].isPressed)
             {
-                this.transform.position += Vector3.up * walkSpd;
+                y += 1f;
             }
             if (Keyboard.current[downKey].isPressed)
             {
-                this.transform.position += Vector3.down * walkSpd;
+                y -= 1f;
             }
 
             if (Keyboard.current[rightKey].isPressed)
             {
-                this.transform.position += Vector3.right * walkSpd;
+                x += 1f;
             }
             if (Keyboard.current[leftKey].isPressed)
             {
-                this.transform.position += Vector3.left * walkSpd;
+                x -= 1f;
             }
 
+            moveInput = new Vector2(x, y).normalized;
+        }
+        else
+        {
+            moveInput = Vector2.zero;
         }
     }
 
@@ -77,6 +102,12 @@ public class Player : MonoBehaviour
         {
             inOcean = true;
         }
+
+        if (other.CompareTag("Shop"))
+        {
+            inShopArea = true;
+            Shop.inShop = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -85,14 +116,16 @@ public class Player : MonoBehaviour
         {
             inOcean = false;
         }
+
+        if (other.CompareTag("Shop"))
+        {
+            inShopArea = false;
+            Shop.inShop = false;
+        }
     }
-    
-    //selectorX ranges from 0 to 2
-    //selectorY ranges from 0 to -4
-    //InventoryLoader.inventoryFishSelector
+
     private void inventorySelection()
     {
-
         if (upperButtons == false)
         {
             if (Keyboard.current[rightKey].wasPressedThisFrame && selectorX < 2)
@@ -119,11 +152,11 @@ public class Player : MonoBehaviour
             {
                 upperButtons = true;
                 selectorY++;
-                if((selectorX == 0 || selectorX == 1) && Shop.inShop == true)
+                if ((selectorX == 0 || selectorX == 1) && Shop.inShop == true)
                 {
                     selectorX = 0;
                     InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 3);
-                } 
+                }
                 else
                 {
                     selectorX = 2;
