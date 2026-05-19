@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     // INFO BUTTON
     public void OpenInfo()
     {
-        Debug.Log("INFO");
+        SceneManager.LoadScene("Info");
     }
 
     // SOUND BUTTON
