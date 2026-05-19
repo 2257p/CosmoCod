@@ -285,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b10d3394678bfb409dc711aafd99227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  numberOfFish: 0
   money: 0
 --- !u!4 &119023279
 Transform:
@@ -427,6 +426,7 @@ MonoBehaviour:
   inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
   inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
   sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
+  moneyBagIcon: {fileID: 277084775324213737, guid: a03243ac7ecb1b64e8b1d2f58e67b8d8, type: 3}
   codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
   salmonSprite: {fileID: -3255037359050697509, guid: e0bb882ada50fd24e877cb8a5eb66cfb, type: 3}
 --- !u!4 &1116420304

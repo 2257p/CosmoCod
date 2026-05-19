@@ -12,12 +12,14 @@ public class InventoryLoader : MonoBehaviour
     public static GameObject inventoryFishSelector;
     public static GameObject detailsPanel;
     public static GameObject sortingButton;
+    public static GameObject sellAllButton;
     public static GameObject sortingText;
     public static bool inventoryOpen = false;
 
     public Sprite inventoryFishSelectorSprite;
     public Sprite inventoryBgSprite;
     public Sprite sortingMethodSwitchButton;
+    public Sprite moneyBagIcon;
     public Sprite codSprite;
     public Sprite salmonSprite;
 
@@ -44,6 +46,7 @@ public class InventoryLoader : MonoBehaviour
 
         OpenCloseInventory();
         SortingButtonDetect();
+        SellButtonDetect();
 
     }
 
@@ -95,6 +98,16 @@ public class InventoryLoader : MonoBehaviour
         }
     }
 
+    //put what happens when you sell all your fish here
+    void SellButtonDetect()
+    {
+        if(Player.selectorX == 0 && Player.selectorY == 1 && Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true)
+        {
+            Inventory.sellAllFish();
+            reloadFish();
+        }
+    }
+
     void reloadFish()
     {
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
@@ -132,7 +145,25 @@ public class InventoryLoader : MonoBehaviour
         inventoryTitle.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
         inventoryTitle.transform.localScale = new Vector3(2f, 1.3f);
         inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
-        
+
+        //sell all icon and text
+        if(Shop.inShop == true)
+        {
+            sellAllButton = new GameObject("SellFishButton");
+            sellAllButton.AddComponent<SpriteRenderer>();
+            sellAllButton.GetComponent<SpriteRenderer>().sprite = moneyBagIcon;
+            sellAllButton.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            sellAllButton.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 3);
+            sellAllButton.transform.parent = inventoryBg.transform;
+            sellAllButton.transform.localScale = new Vector3(0.6f, 0.6f);
+
+            GameObject sellAllText = Instantiate(textPrefab);
+            sellAllText.transform.localScale = new Vector3(0.5f, 0.5f);
+            sellAllText.transform.position = inventoryBg.transform.position + new Vector3(-1.3f, 3);
+            sellAllText.transform.parent = inventoryBg.transform;
+            sellAllText.GetComponent<TMP_Text>().text = "sell\nall";
+            
+        }
 
         //sort text
         sortingText = Instantiate(textPrefab);
