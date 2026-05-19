@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    float walkSpd = 0.05f;
+    float walkSpd = 4f;
     bool inOcean = false;
     bool inShopArea = false;
 
