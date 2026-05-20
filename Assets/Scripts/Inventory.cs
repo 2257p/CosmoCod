@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void sellFish(int index)
+    public static void sellFish(int index)
     {
         if (inventory[index] != null)
         {
@@ -71,6 +71,29 @@ public class Inventory : MonoBehaviour
             inventory[maxInventorySpace - 1] = null;
         }
     }
+
+    public static void sellFish(Fish f)
+    {
+        for (int j = 0; j < maxInventorySpace; j++)
+        {
+            if (inventory[j] == f)
+            {
+                money += f.getValue();
+                f = null;
+                numberOfFish -= 1;
+
+                for(int i = j; i < maxInventorySpace - 1; i++)
+                {
+                    inventory[i] = inventory[i + 1];
+                }
+                inventory[maxInventorySpace - 1] = null;
+
+                break;
+
+            }
+        }
+    }
+
     public static void sellAllFish()
     {
         foreach(Fish fish in inventory)
