@@ -7,7 +7,7 @@ public class InventoryLoader : MonoBehaviour
 {
     public GameObject textPrefab;
 
-    public GameObject player;
+    public static GameObject player;
     public static GameObject inventoryBg;
     public static GameObject inventoryFishSelector;
     public static GameObject detailsPanel;
@@ -50,6 +50,8 @@ public class InventoryLoader : MonoBehaviour
 
     }
 
+    
+
     void OpenCloseInventory()
     {
         if (Keyboard.current[Player.showInventoryKey].wasPressedThisFrame)
@@ -68,6 +70,22 @@ public class InventoryLoader : MonoBehaviour
             }
 
         }
+    }
+    
+    //for use by the shop script
+    public static void ShopOpenInventory()
+    {
+        Shop.inShop = true;
+        inventoryOpen = true;
+        inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
+    }
+
+    //for use by the shop script
+    public static void ShopCloseInventory()
+    {
+        Shop.inShop = false;
+        inventoryOpen = false;
+        inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
     }
 
     void SortingButtonDetect()
@@ -98,7 +116,6 @@ public class InventoryLoader : MonoBehaviour
         }
     }
 
-    //put what happens when you sell all your fish here
     void SellButtonDetect()
     {
         if(Player.selectorX == 0 && Player.selectorY == 1 && Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true)
@@ -108,7 +125,7 @@ public class InventoryLoader : MonoBehaviour
         }
     }
 
-    void reloadFish()
+    public void reloadFish()
     {
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach(GameObject g in allObjects)
@@ -134,6 +151,7 @@ public class InventoryLoader : MonoBehaviour
         Color t = inventoryBg.GetComponent<SpriteRenderer>().color;
         t /= 2;
         inventoryBg.GetComponent<SpriteRenderer>().color = t;
+        inventoryBg.GetComponent<SpriteRenderer>().sortingOrder = 1;
         inventoryBg.transform.localScale = new Vector3(1.2f, 1);
         inventoryBg.transform.parent = player.transform;
         inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
@@ -191,6 +209,7 @@ public class InventoryLoader : MonoBehaviour
         Color c = detailsPanel.GetComponent<SpriteRenderer>().color;
         c /= 2;
         detailsPanel.GetComponent<SpriteRenderer>().color = c;
+        detailsPanel.GetComponent<SpriteRenderer>().sortingOrder = 1;
         detailsPanel.transform.position = inventoryBg.transform.position + new Vector3(5f, 0);
         detailsPanel.transform.parent = inventoryBg.transform;
 
@@ -215,7 +234,7 @@ public class InventoryLoader : MonoBehaviour
         
     }
 
-    void loadFish()
+    public void loadFish()
     {
         for (int i = 0; i < Inventory.maxInventorySpace; i++)
         {

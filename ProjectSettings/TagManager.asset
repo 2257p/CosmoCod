@@ -8,6 +8,7 @@ TagManager:
   - Fish
   - Ocean
   - Shop
+  - InventoryLoader
   layers:
   - Default
   - TransparentFX

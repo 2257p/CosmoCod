@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class InventoryFish : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class InventoryFish : MonoBehaviour
     public Fish fish;
     private int inventoryIndex;
     public Sprite spr;
+    public GameObject inventoryLoader;
 
     private float lerpingVar = 0f;
     private float lerpingMax = 2f;
@@ -26,6 +28,16 @@ public class InventoryFish : MonoBehaviour
 
     private void Start()
     {
+
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.CompareTag("InventoryLoader"))
+            {
+                inventoryLoader = obj;
+                break;
+            }
+        }
 
         for(int i = 0; i < Inventory.maxInventorySpace; i++)
         {
@@ -98,6 +110,17 @@ public class InventoryFish : MonoBehaviour
             if(lerpingVar < 1)
             {
                 lerpingVar += Mathf.Pow(2, -5*(lerpingTime+0.3f));
+            }
+
+            if (Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true)
+            {
+                Inventory.sellFish(fish);
+                inventoryLoader.GetComponent<InventoryLoader>().reloadFish();
+                Debug.Log(Inventory.money);
+                fishNameText.GetComponent<TMP_Text>().text = "";
+                fishSprite.GetComponent<SpriteRenderer>().sprite = null;
+                fishValueText.GetComponent<TMP_Text>().text = "";
+                fishMassText.GetComponent<TMP_Text>().text = "";
             }
 
         } else

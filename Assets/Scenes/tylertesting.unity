@@ -285,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b10d3394678bfb409dc711aafd99227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  money: 0
 --- !u!4 &119023279
 Transform:
   m_ObjectHideFlags: 0
@@ -404,7 +403,7 @@ GameObject:
   - component: {fileID: 1116420303}
   m_Layer: 0
   m_Name: InventoryLoader
-  m_TagString: Untagged
+  m_TagString: InventoryLoader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,7 +421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryLoader
   textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
-  player: {fileID: 0}
   inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
   inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
   sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
