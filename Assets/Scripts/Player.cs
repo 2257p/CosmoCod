@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     float walkSpd = 4f;
-    bool inOcean = false;
+    public static bool inOcean = false;
     bool inShopArea = false;
 
     Key upKey = Key.UpArrow;
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         {
             if (inOcean == true)
             {
-                Debug.Log("It works");
+                
             }
 
             if (inShopArea == true)
