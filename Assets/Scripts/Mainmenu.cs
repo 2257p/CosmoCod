@@ -5,30 +5,30 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     // SOUND BUTTON TEXT
-    public Text soundText;
+    public static Text soundText;
 
-    bool soundOn = true;
+    private static bool soundOn = true;
 
     // PLAY BUTTON
-    public void PlayGame()
+    public static void PlayGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("vincenttests");
     }
 
     // OPTIONS BUTTON
-    public void OpenOptions()
+    public static void OpenOptions()
     {
         Debug.Log("OPTIONS");
     }
 
     // INFO BUTTON
-    public void OpenInfo()
+    public static void OpenInfo()
     {
-        SceneManager.LoadScene("Info");
+        SceneManager.LoadScene("INFO");
     }
 
     // SOUND BUTTON
-    public void ToggleSound()
+    public static void ToggleSound()
     {
         soundOn = !soundOn;
 
@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour
     }
 
     // QUIT BUTTON
-    public void QuitGame()
+    public static void QuitGame()
     {
         Application.Quit();
         Debug.Log("QUIT");
