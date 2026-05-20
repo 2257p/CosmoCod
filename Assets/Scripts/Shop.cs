@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-
     public static bool inShop = false;
 
-    public void Interact()
+    public static void Interact()
     {
-        Debug.Log("Shop interacted!");
+        Debug.Log("Shop opened");
     }
 }

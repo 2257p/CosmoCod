@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     public static Fish[] inventory = new Fish[maxInventorySpace];
 
     //stuff pertaining to money
-    public float money = 0f;
+    public static float money = 0f;
 
     //stuff pertaining to inventory
     public static int sortingMethod; //0 is value, 1 is mass, 2 is value/mass
@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
         addFish(new Fish("Cod", 0, 4, 1));
         numberOfFish = 4;
 
+        sortingMethod = 2;
         sortByValuePerMass();
 
         //Debug.Log(inventoryToString());
@@ -70,7 +71,7 @@ public class Inventory : MonoBehaviour
             inventory[maxInventorySpace - 1] = null;
         }
     }
-    public void sellAllFish()
+    public static void sellAllFish()
     {
         foreach(Fish fish in inventory)
         {
@@ -104,6 +105,15 @@ public class Inventory : MonoBehaviour
                         inventory[j] = inventory[j + 1];
                         inventory[j + 1] = temp;
                     }
+                    if (inventory[j].getValue() == inventory[j + 1].getValue())
+                    {
+                        if (inventory[j].getMass() > inventory[j + 1].getMass())
+                        {
+                            Fish temp = inventory[j];
+                            inventory[j] = inventory[j + 1];
+                            inventory[j + 1] = temp;
+                        }
+                    }
                 }
             }
         }
@@ -124,6 +134,15 @@ public class Inventory : MonoBehaviour
                         Fish temp = inventory[j];
                         inventory[j] = inventory[j + 1];
                         inventory[j + 1] = temp;
+                    }
+                    if (inventory[j].getMass() == inventory[j + 1].getMass())
+                    {
+                        if (inventory[j].getValue() > inventory[j + 1].getValue())
+                        {
+                            Fish temp = inventory[j];
+                            inventory[j] = inventory[j + 1];
+                            inventory[j + 1] = temp;
+                        }
                     }
                 }
             }
