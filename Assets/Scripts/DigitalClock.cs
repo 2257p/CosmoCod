@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DigitalClock : MonoBehaviour
 {
     TimeManager tm;
-    Text display;
+    TextMeshProUGUI display; // ← change this
 
     public bool _24HourClock = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         tm = Object.FindFirstObjectByType<TimeManager>();
-        display = GetComponent<Text>();
+        display = GetComponentInChildren<TextMeshProUGUI>(); // ← and this
     }
 
-    // Update is called once per frame
     void Update()
     {
-        display.text = tm.Clock24Hour();
+        if (tm != null && display != null)
+            display.text = tm.Clock24Hour();
     }
 }
