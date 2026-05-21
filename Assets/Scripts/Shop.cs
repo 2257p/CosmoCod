@@ -7,5 +7,6 @@ public class Shop : MonoBehaviour
     public static void Interact()
     {
         Debug.Log("Shop opened");
+        InventoryLoader.ShopOpenInventory();
     }
 }
