@@ -16,7 +16,7 @@ public class FishCheck : MonoBehaviour
     {
         if (isInsideSquare)
         {
-            if (Time.time - enterTime >= 1.4f)
+            if (Time.time - enterTime >= 1.3f)
             {
                 fishRandomizer.Randomizer();
                 isInsideSquare = false;
