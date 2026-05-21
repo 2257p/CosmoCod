@@ -1,39 +1,48 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    // SOUND BUTTON TEXT
-    public static Text soundText;
+    // DRAG YOUR SOUND BUTTON TEXT HERE
+    public TMP_Text soundText;
 
-    private static bool soundOn = true;
+    // SOUND STATE
+    private bool soundOn = true;
 
     // PLAY BUTTON
-    public static void PlayGame()
+    public void Play()
     {
         SceneManager.LoadScene("vincenttests");
     }
 
     // OPTIONS BUTTON
-    public static void OpenOptions()
+    public void Option()
     {
-        Debug.Log("OPTIONS");
+        SceneManager.LoadScene("Settings");
     }
 
     // INFO BUTTON
-    public static void OpenInfo()
+    public void Info()
     {
         SceneManager.LoadScene("INFO");
     }
 
+    // BACK BUTTON (FROM INFO -> MAIN MENU)
+    public void Previous()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     // SOUND BUTTON
-    public static void ToggleSound()
+    public void Sound()
     {
         soundOn = !soundOn;
 
-        AudioListener.volume = soundOn ? 1 : 0;
+        // TURN AUDIO ON/OFF
+        AudioListener.volume = soundOn ? 1f : 0f;
 
+        // UPDATE BUTTON TEXT
         if (soundOn)
         {
             soundText.text = "SOUND: ON";
@@ -42,12 +51,20 @@ public class MainMenu : MonoBehaviour
         {
             soundText.text = "SOUND: OFF";
         }
+
+        Debug.Log("Sound: " + soundOn);
     }
 
     // QUIT BUTTON
-    public static void QuitGame()
+    public void Quit()
     {
+        Debug.Log("QUIT GAME");
+
         Application.Quit();
-        Debug.Log("QUIT");
+
+        // stops play mode in editor
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
