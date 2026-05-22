@@ -23,7 +23,8 @@ public class Inventory : MonoBehaviour
         addFish(new Fish("Salmon", 0, 6, 3));
         addFish(new Fish("Salmon", 2, 8, 4));
         addFish(new Fish("Cod", 0, 4, 1));
-        numberOfFish = 4;
+        addFish(new Fish("Sunking", 3, 160, 2));
+        numberOfFish = 5;
 
         sortingMethod = 2;
         sortByValuePerMass();

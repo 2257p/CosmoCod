@@ -9,10 +9,12 @@ public class InventoryLoader : MonoBehaviour
 
     public static GameObject player;
     public static GameObject inventoryBg;
+    public static GameObject inventoryTitle;
     public static GameObject inventoryFishSelector;
     public static GameObject detailsPanel;
     public static GameObject sortingButton;
     public static GameObject sellAllButton;
+    public static GameObject sellAllText;
     public static GameObject sortingText;
     public static bool inventoryOpen = false;
 
@@ -22,6 +24,20 @@ public class InventoryLoader : MonoBehaviour
     public Sprite moneyBagIcon;
     public Sprite codSprite;
     public Sprite salmonSprite;
+    public Sprite pikeSprite;
+    public Sprite blueySprite;
+    public Sprite redfinSprite;
+    public Sprite sparklefinSprite;
+    public Sprite starfinSprite;
+    public Sprite bubblefinSprite;
+    public Sprite clownfishSprite;
+    public Sprite firefishSprite;
+    public Sprite anglerfishSprite;
+    public Sprite beefishSprite;
+    public Sprite frostkingSprite;
+    public Sprite goldkingSprite;
+    public Sprite rainbowkingSprite;
+    public Sprite sunkingSprite;
 
     private void Start()
     {
@@ -78,6 +94,9 @@ public class InventoryLoader : MonoBehaviour
         Shop.inShop = true;
         inventoryOpen = true;
         inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
+        sellAllButton.SetActive(true);
+        sellAllText.SetActive(true);
+        inventoryTitle.GetComponent<TMP_Text>().text = "Sell";
     }
 
     //for use by the shop script
@@ -86,6 +105,9 @@ public class InventoryLoader : MonoBehaviour
         Shop.inShop = false;
         inventoryOpen = false;
         inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
+        sellAllButton.SetActive(false);
+        sellAllText.SetActive(false);
+        inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
     }
 
     void SortingButtonDetect()
@@ -157,16 +179,21 @@ public class InventoryLoader : MonoBehaviour
         inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
 
         //inventory title
-        GameObject inventoryTitle = Instantiate(textPrefab);
+        inventoryTitle = Instantiate(textPrefab);
         inventoryTitle.transform.parent = inventoryBg.transform;
         inventoryTitle.transform.position = inventoryBg.transform.position + new Vector3(-1.8f, 0f);
         inventoryTitle.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
         inventoryTitle.transform.localScale = new Vector3(2f, 1.3f);
-        inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
-
-        //sell all icon and text
-        if(Shop.inShop == true)
+        if (Shop.inShop == false)
         {
+            inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
+        }
+        else if (Shop.inShop == true)
+        {
+            inventoryTitle.GetComponent<TMP_Text>().text = "Sell";
+        }
+
+
             sellAllButton = new GameObject("SellFishButton");
             sellAllButton.AddComponent<SpriteRenderer>();
             sellAllButton.GetComponent<SpriteRenderer>().sprite = moneyBagIcon;
@@ -175,13 +202,19 @@ public class InventoryLoader : MonoBehaviour
             sellAllButton.transform.parent = inventoryBg.transform;
             sellAllButton.transform.localScale = new Vector3(0.6f, 0.6f);
 
-            GameObject sellAllText = Instantiate(textPrefab);
+            sellAllText = Instantiate(textPrefab);
             sellAllText.transform.localScale = new Vector3(0.5f, 0.5f);
             sellAllText.transform.position = inventoryBg.transform.position + new Vector3(-1.3f, 3);
             sellAllText.transform.parent = inventoryBg.transform;
             sellAllText.GetComponent<TMP_Text>().text = "sell\nall";
-            
+
+        if(Shop.inShop == false)
+        {
+            sellAllButton.SetActive(false);
+            sellAllText.SetActive(false);
         }
+            
+        
 
         //sort text
         sortingText = Instantiate(textPrefab);
@@ -202,8 +235,8 @@ public class InventoryLoader : MonoBehaviour
         }
 
 
-            //inventory details panel
-            detailsPanel = new GameObject("DetailsPanel");
+        //inventory details panel
+        detailsPanel = new GameObject("DetailsPanel");
         detailsPanel.AddComponent<SpriteRenderer>();
         detailsPanel.GetComponent<SpriteRenderer>().sprite = inventoryBgSprite;
         Color c = detailsPanel.GetComponent<SpriteRenderer>().color;
@@ -284,10 +317,298 @@ public class InventoryLoader : MonoBehaviour
 
                 }
 
+                else if (Inventory.inventory[i].getName() == "Pike")
+                {
 
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = pikeSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
+                }
 
+                else if (Inventory.inventory[i].getName() == "Bluey")
+                {
 
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = blueySprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Redfin")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = redfinSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Sparklefin")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = sparklefinSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Starfin")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = starfinSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Bubblefin")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = bubblefinSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Clownfish")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = clownfishSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Firefish")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = firefishSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Anglerfish")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = anglerfishSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Beefish")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = beefishSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Frostking")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = frostkingSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+                else if (Inventory.inventory[i].getName() == "Goldking")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = goldkingSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Rainbowking")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = rainbowkingSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
+
+                else if (Inventory.inventory[i].getName() == "Sunking")
+                {
+
+                    GameObject temp = new GameObject("Fish");
+                    temp.AddComponent<InventoryFish>();
+                    temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
+                    temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
+                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.AddComponent<BoxCollider2D>();
+                    temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
+                    temp.GetComponent<BoxCollider2D>().isTrigger = true;
+                    temp.tag = "Fish";
+                    temp.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2) + new Vector3(i % 3, -i / 3);
+                    temp.transform.parent = detailsPanel.transform;
+                    temp.AddComponent<SpriteRenderer>();
+                    temp.GetComponent<SpriteRenderer>().sprite = sunkingSprite;
+                    temp.transform.localScale = new Vector3(2, 2);
+                    temp.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                }
 
             }
 
