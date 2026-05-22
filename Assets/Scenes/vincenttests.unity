@@ -2656,6 +2656,71 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &686010590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686010592}
+  - component: {fileID: 686010591}
+  m_Layer: 0
+  m_Name: InventoryLoader
+  m_TagString: InventoryLoader
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &686010591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686010590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37c0613718d8784bac1726b34af3ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryLoader
+  textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
+  inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
+  inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
+  sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
+  moneyBagIcon: {fileID: 277084775324213737, guid: a03243ac7ecb1b64e8b1d2f58e67b8d8, type: 3}
+  codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
+  salmonSprite: {fileID: -3255037359050697509, guid: e0bb882ada50fd24e877cb8a5eb66cfb, type: 3}
+  pikeSprite: {fileID: 6508466257912415314, guid: 9475152faf3804298b317335e4c7538d, type: 3}
+  blueySprite: {fileID: -7885042113601330170, guid: 66b5c00c2fe38405394698a6620b7dd6, type: 3}
+  redfinSprite: {fileID: -6818252685222333559, guid: f0923648e44d6405183d6f0419f90887, type: 3}
+  sparklefinSprite: {fileID: 5889969463242438030, guid: fed77b8bce1ee4a6fbcbfe733852cfa1, type: 3}
+  starfinSprite: {fileID: 6272933877002867073, guid: 887b36ebda0794e238dfc763d5b6ad4d, type: 3}
+  bubblefinSprite: {fileID: -6854877463949727061, guid: 69bf452ff83e34e9cb9fd5b36b5884ad, type: 3}
+  clownfishSprite: {fileID: 7337986634926516861, guid: a09f40dd0745c44a59d0f0962a281014, type: 3}
+  firefishSprite: {fileID: -275958080014898853, guid: 448eff63364404d89be7b780d131e892, type: 3}
+  anglerfishSprite: {fileID: 510329741825587157, guid: 32588be0aee314a85a2167d5ec03e503, type: 3}
+  beefishSprite: {fileID: -2517888228396730254, guid: 48441af36fc414fc384627254456e7a7, type: 3}
+  frostkingSprite: {fileID: -8067559927098218051, guid: 1f912bfbcda8e43ebb9e324908f7364f, type: 3}
+  goldkingSprite: {fileID: -5810789870731041425, guid: 7c1894e5525474276845eed5047438e6, type: 3}
+  rainbowkingSprite: {fileID: -6410140015447674141, guid: 205c2de467ecd4774af322f50f9e8b2a, type: 3}
+  sunkingSprite: {fileID: 5325584982730375599, guid: 1a5d546b7fd1d4321b270471f93292e3, type: 3}
+--- !u!4 &686010592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686010590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.28777, y: -0.60843, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &755429796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,57 +2858,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755429796}
   m_CullTransparentMesh: 1
---- !u!1 &761680477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 761680479}
-  - component: {fileID: 761680478}
-  m_Layer: 0
-  m_Name: InventoryLoader
-  m_TagString: InventoryLoader
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &761680478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761680477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f37c0613718d8784bac1726b34af3ce9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryLoader
-  textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
-  inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
-  inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
-  sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
-  moneyBagIcon: {fileID: 277084775324213737, guid: a03243ac7ecb1b64e8b1d2f58e67b8d8, type: 3}
-  codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
-  salmonSprite: {fileID: -3255037359050697509, guid: e0bb882ada50fd24e877cb8a5eb66cfb, type: 3}
---- !u!4 &761680479
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761680477}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28777, y: -0.60843, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841377675
 GameObject:
   m_ObjectHideFlags: 0
@@ -8976,5 +8990,5 @@ SceneRoots:
   - {fileID: 198086751}
   - {fileID: 574140252}
   - {fileID: 2082684480}
-  - {fileID: 761680479}
   - {fileID: 546400190}
+  - {fileID: 686010592}

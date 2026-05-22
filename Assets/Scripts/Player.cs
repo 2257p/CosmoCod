@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     Key rightKey = Key.RightArrow;
     public static Key interactKey = Key.Z;
     public static Key showInventoryKey = Key.C;
+    public static Key cancelKey = Key.X;
 
     public static bool inCutscene = false;
 
@@ -35,24 +36,33 @@ public class Player : MonoBehaviour
         {
             if (inOcean == true)
             {
-                
+
             }
 
-            if (inShopArea == true)
+            if (inShopArea == true && Shop.inShop == false && InventoryLoader.inventoryOpen == false)
             {
                 Shop.Interact();
             }
         }
 
-        if (InventoryLoader.inventoryOpen == false)
+        if ((Keyboard.current[showInventoryKey].wasPressedThisFrame || Keyboard.current[cancelKey].wasPressedThisFrame) && Shop.inShop == true)
+        {
+            Shop.CloseShop();
+        }
+
+        if (InventoryLoader.inventoryOpen == false && Shop.inShop == false && inCutscene == false)
         {
             playerMovement();
         }
-        else if (InventoryLoader.inventoryOpen == true)
+
+        else if (InventoryLoader.inventoryOpen == true || Shop.inShop == true)
         {
             moveInput = Vector2.zero;
             inventorySelection();
         }
+
+        
+
     }
 
     void FixedUpdate()
@@ -106,7 +116,6 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Shop"))
         {
             inShopArea = true;
-            Shop.inShop = true;
         }
     }
 
@@ -120,7 +129,6 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Shop"))
         {
             inShopArea = false;
-            Shop.inShop = false;
         }
     }
 

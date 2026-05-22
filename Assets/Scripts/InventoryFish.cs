@@ -112,11 +112,10 @@ public class InventoryFish : MonoBehaviour
                 lerpingVar += Mathf.Pow(2, -5*(lerpingTime+0.3f));
             }
 
-            if (Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true)
+            if (Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true && Shop.shopJustOpened == false)
             {
                 Inventory.sellFish(fish);
                 inventoryLoader.GetComponent<InventoryLoader>().reloadFish();
-                Debug.Log(Inventory.money);
                 fishNameText.GetComponent<TMP_Text>().text = "";
                 fishSprite.GetComponent<SpriteRenderer>().sprite = null;
                 fishValueText.GetComponent<TMP_Text>().text = "";

@@ -73,17 +73,25 @@ public class InventoryLoader : MonoBehaviour
         if (Keyboard.current[Player.showInventoryKey].wasPressedThisFrame)
         {
             
-            if(Player.inCutscene == false && inventoryOpen == false)
+            if(Player.inCutscene == false && inventoryOpen == false && Shop.inShop == false)
             {
                 inventoryOpen = true;
                 inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
 
             }
-            else if (Player.inCutscene == false && inventoryOpen == true)
+            else if (Player.inCutscene == false && inventoryOpen == true && Shop.inShop == false)
             {
                 inventoryOpen = false;
                 inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
             }
+
+        }
+
+        //another option to close inventory
+        if (Keyboard.current[Player.cancelKey].wasPressedThisFrame && inventoryOpen == true)
+        {
+            inventoryOpen = false;
+            inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
 
         }
     }
@@ -92,7 +100,6 @@ public class InventoryLoader : MonoBehaviour
     public static void ShopOpenInventory()
     {
         Shop.inShop = true;
-        inventoryOpen = true;
         inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
         sellAllButton.SetActive(true);
         sellAllText.SetActive(true);
@@ -103,7 +110,6 @@ public class InventoryLoader : MonoBehaviour
     public static void ShopCloseInventory()
     {
         Shop.inShop = false;
-        inventoryOpen = false;
         inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
         sellAllButton.SetActive(false);
         sellAllText.SetActive(false);
@@ -264,6 +270,7 @@ public class InventoryLoader : MonoBehaviour
         sortingButton.transform.parent = inventoryBg.transform;
 
         loadFish();
+        reloadFish();
         
     }
 
@@ -324,7 +331,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = pikeSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -345,7 +352,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = blueySprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -366,7 +373,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = redfinSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -387,7 +394,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = sparklefinSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -408,7 +415,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = starfinSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -429,7 +436,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = bubblefinSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -450,7 +457,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = clownfishSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -471,7 +478,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = firefishSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -492,7 +499,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = anglerfishSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -513,7 +520,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = beefishSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -534,7 +541,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = frostkingSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -554,7 +561,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = goldkingSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -575,7 +582,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = rainbowkingSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -596,7 +603,7 @@ public class InventoryLoader : MonoBehaviour
                     temp.AddComponent<InventoryFish>();
                     temp.GetComponent<InventoryFish>().fish = Inventory.inventory[i];
                     temp.GetComponent<InventoryFish>().textPrefab = textPrefab;
-                    temp.GetComponent<InventoryFish>().spr = codSprite;
+                    temp.GetComponent<InventoryFish>().spr = sunkingSprite;
                     temp.AddComponent<BoxCollider2D>();
                     temp.GetComponent<BoxCollider2D>().size = new Vector3(0.5f, 0.5f);
                     temp.GetComponent<BoxCollider2D>().isTrigger = true;
