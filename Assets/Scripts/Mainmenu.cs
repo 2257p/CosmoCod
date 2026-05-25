@@ -13,25 +13,25 @@ public class MainMenu : MonoBehaviour
     // PLAY BUTTON
     public void Play()
     {
-        SceneManager.LoadScene("vincenttests");
+        SceneManager.LoadScene("TestScene");
     }
 
     // OPTIONS BUTTON
     public void Option()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("Setting");
     }
 
     // INFO BUTTON
     public void Info()
     {
-        SceneManager.LoadScene("INFO");
+        SceneManager.LoadScene("Info");
     }
 
     // BACK BUTTON (FROM INFO -> MAIN MENU)
     public void Previous()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MAINMENU");
     }
 
     // SOUND BUTTON
