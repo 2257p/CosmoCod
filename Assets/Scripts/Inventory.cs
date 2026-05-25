@@ -28,10 +28,7 @@ public class Inventory : MonoBehaviour
 
         sortingMethod = 2;
         sortByValuePerMass();
-
-        //Debug.Log(inventoryToString());
         
-
     }
 
     public string inventoryToString() //for testing
@@ -71,6 +68,7 @@ public class Inventory : MonoBehaviour
             }
             inventory[maxInventorySpace - 1] = null;
         }
+        InventoryLoader.reloadMoney();
     }
 
     public static void sellFish(Fish f)
@@ -93,6 +91,7 @@ public class Inventory : MonoBehaviour
 
             }
         }
+        InventoryLoader.reloadMoney();
     }
 
     public static void sellAllFish()
@@ -110,6 +109,7 @@ public class Inventory : MonoBehaviour
         {
             inventory[i] = null;
         }
+        InventoryLoader.reloadMoney();
 
     }
 

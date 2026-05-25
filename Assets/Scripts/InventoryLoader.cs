@@ -16,6 +16,7 @@ public class InventoryLoader : MonoBehaviour
     public static GameObject sellAllButton;
     public static GameObject sellAllText;
     public static GameObject sortingText;
+    public static GameObject moneyText;
     public static bool inventoryOpen = false;
 
     public Sprite inventoryFishSelectorSprite;
@@ -168,6 +169,10 @@ public class InventoryLoader : MonoBehaviour
 
     }
 
+    public static void reloadMoney()
+    {
+        moneyText.GetComponent<TMP_Text>().text = "$" + Inventory.money;
+    }
 
     void loadInventory()
     {
@@ -219,7 +224,13 @@ public class InventoryLoader : MonoBehaviour
             sellAllButton.SetActive(false);
             sellAllText.SetActive(false);
         }
-            
+        
+        //money amount text
+        moneyText = Instantiate(textPrefab);
+        //moneyText.transform.localScale = new Vector3(0.5f, 0.5f);
+        moneyText.transform.position = inventoryBg.transform.position + new Vector3(-5.5f, -3.5f);
+        moneyText.transform.parent = inventoryBg.transform;
+        moneyText.GetComponent<TMP_Text>().text = "$" + Inventory.money;
         
 
         //sort text
@@ -270,7 +281,6 @@ public class InventoryLoader : MonoBehaviour
         sortingButton.transform.parent = inventoryBg.transform;
 
         loadFish();
-        reloadFish();
         
     }
 
