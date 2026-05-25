@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     private static bool isPaused = false;
     public GameObject PauseMenu;
+    public GameObject DigitalClock;
     void Start()
     {
         if (isPaused == false)
@@ -27,12 +28,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         PauseMenu.SetActive(true);
+        DigitalClock.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
     public void ResumeGame()
     {
         PauseMenu.SetActive(false);
+         DigitalClock.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }  
