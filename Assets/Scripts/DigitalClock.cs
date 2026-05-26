@@ -22,4 +22,28 @@ public class DigitalClock : MonoBehaviour
         if (tm != null && display != null)
             display.text = tm.Clock24Hour();
     }
+
+// public class Program
+// {
+//     public static int CountDays(int days1)
+//     {
+//         if (days1 == 0)
+//         {
+//           return 0;
+//         }
+//         else if (days1 == 1)
+//         {
+//           return 1;
+//         }
+//         else
+//         {
+//           return 1 + CountDays(days1 - 1);
+//         }
+//     }
+
+//     public static void Main(string[] args)
+//     {
+//         Console.WriteLine(CountDays(5));
+//     }
+// }
 }

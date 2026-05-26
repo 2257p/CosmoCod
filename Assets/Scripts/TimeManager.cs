@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
 
-    public float dayDuration = 30f;
+    public float dayDuration;
 
     float totalTime = 0;
     float currentTime = 0;
