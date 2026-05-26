@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    float walkSpd = 5f;
+    float walkSpd = 6f;
+
     public static bool inOcean = false;
     bool inShopArea = false;
 
@@ -12,13 +13,14 @@ public class Player : MonoBehaviour
     Key downKey = Key.DownArrow;
     Key leftKey = Key.LeftArrow;
     Key rightKey = Key.RightArrow;
+
     public static Key interactKey = Key.Z;
     public static Key showInventoryKey = Key.C;
     public static Key cancelKey = Key.X;
 
     public static bool inCutscene = false;
 
-    //inventory stuff
+    // inventory stuff
     public static int selectorX = 0;
     public static int selectorY = 0;
     public static bool upperButtons = false;
@@ -26,9 +28,15 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
 
+    // ANIMATOR
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // Get Animator automatically
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -40,35 +48,49 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene("TestFishMechScene");
             }
 
-            if (inShopArea == true && Shop.inShop == false && InventoryLoader.inventoryOpen == false)
+            if (inShopArea == true &&
+                Shop.inShop == false &&
+                InventoryLoader.inventoryOpen == false)
             {
                 Shop.Interact();
             }
         }
 
-        if ((Keyboard.current[showInventoryKey].wasPressedThisFrame || Keyboard.current[cancelKey].wasPressedThisFrame) && Shop.inShop == true)
+        if ((Keyboard.current[showInventoryKey].wasPressedThisFrame ||
+             Keyboard.current[cancelKey].wasPressedThisFrame)
+             && Shop.inShop == true)
         {
             Shop.CloseShop();
         }
 
-        if (InventoryLoader.inventoryOpen == false && Shop.inShop == false && inCutscene == false)
+        if (InventoryLoader.inventoryOpen == false &&
+            Shop.inShop == false &&
+            inCutscene == false)
         {
             playerMovement();
         }
-
-        else if (InventoryLoader.inventoryOpen == true || Shop.inShop == true)
+        else if (InventoryLoader.inventoryOpen == true ||
+                 Shop.inShop == true)
         {
             moveInput = Vector2.zero;
+
+            // IDLE ANIMATION
+            animator.SetFloat("MoveX", 0f);
+            animator.SetFloat("MoveY", 0f);
+
             inventorySelection();
         }
-
     }
 
     void FixedUpdate()
     {
-        if (InventoryLoader.inventoryOpen == false && inCutscene == false)
+        if (InventoryLoader.inventoryOpen == false &&
+            inCutscene == false)
         {
-            rb.MovePosition(rb.position + moveInput * walkSpd * Time.fixedDeltaTime);
+            rb.MovePosition(
+                rb.position +
+                moveInput * walkSpd * Time.fixedDeltaTime
+            );
         }
     }
 
@@ -83,6 +105,7 @@ public class Player : MonoBehaviour
             {
                 y += 1f;
             }
+
             if (Keyboard.current[downKey].isPressed)
             {
                 y -= 1f;
@@ -92,16 +115,25 @@ public class Player : MonoBehaviour
             {
                 x += 1f;
             }
+
             if (Keyboard.current[leftKey].isPressed)
             {
                 x -= 1f;
             }
 
             moveInput = new Vector2(x, y).normalized;
+
+            // SEND VALUES TO ANIMATOR
+            animator.SetFloat("MoveX", moveInput.x);
+            animator.SetFloat("MoveY", moveInput.y);
         }
         else
         {
             moveInput = Vector2.zero;
+
+            // IDLE
+            animator.SetFloat("MoveX", 0f);
+            animator.SetFloat("MoveY", 0f);
         }
     }
 
@@ -135,60 +167,92 @@ public class Player : MonoBehaviour
     {
         if (upperButtons == false)
         {
-            if (Keyboard.current[rightKey].wasPressedThisFrame && selectorX < 2)
+            if (Keyboard.current[rightKey].wasPressedThisFrame &&
+                selectorX < 2)
             {
                 selectorX++;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(1, 0);
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(1, 0);
             }
-            if (Keyboard.current[leftKey].wasPressedThisFrame && selectorX > 0)
+
+            if (Keyboard.current[leftKey].wasPressedThisFrame &&
+                selectorX > 0)
             {
                 selectorX--;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(-1, 0);
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(-1, 0);
             }
-            if (Keyboard.current[downKey].wasPressedThisFrame && selectorY > -4)
+
+            if (Keyboard.current[downKey].wasPressedThisFrame &&
+                selectorY > -4)
             {
                 selectorY--;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(0, -1);
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(0, -1);
             }
-            if (Keyboard.current[upKey].wasPressedThisFrame && selectorY < 0)
+
+            if (Keyboard.current[upKey].wasPressedThisFrame &&
+                selectorY < 0)
             {
                 selectorY++;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(0, 1);
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(0, 1);
             }
-            else if (Keyboard.current[upKey].wasPressedThisFrame && selectorY == 0)
+            else if (Keyboard.current[upKey].wasPressedThisFrame &&
+                     selectorY == 0)
             {
                 upperButtons = true;
                 selectorY++;
-                if ((selectorX == 0 || selectorX == 1) && Shop.inShop == true)
+
+                if ((selectorX == 0 || selectorX == 1) &&
+                    Shop.inShop == true)
                 {
                     selectorX = 0;
-                    InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 3);
+
+                    InventoryLoader.inventoryFishSelector.transform.position =
+                        InventoryLoader.inventoryBg.transform.position +
+                        new Vector3(-0.5f, 3);
                 }
                 else
                 {
                     selectorX = 2;
-                    InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(1.5f, 3);
+
+                    InventoryLoader.inventoryFishSelector.transform.position =
+                        InventoryLoader.inventoryBg.transform.position +
+                        new Vector3(1.5f, 3);
                 }
             }
         }
 
         if (upperButtons == true)
         {
-            if (Shop.inShop == true && Keyboard.current[leftKey].wasPressedThisFrame && selectorX == 2)
+            if (Shop.inShop == true &&
+                Keyboard.current[leftKey].wasPressedThisFrame &&
+                selectorX == 2)
             {
                 selectorX = 0;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(-2, 0);
+
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(-2, 0);
             }
-            if (Shop.inShop == true && Keyboard.current[rightKey].wasPressedThisFrame && selectorX == 0)
+
+            if (Shop.inShop == true &&
+                Keyboard.current[rightKey].wasPressedThisFrame &&
+                selectorX == 0)
             {
                 selectorX = 2;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(2, 0);
+
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(2, 0);
             }
+
             if (Keyboard.current[downKey].wasPressedThisFrame)
             {
                 selectorY--;
                 upperButtons = false;
-                InventoryLoader.inventoryFishSelector.transform.position += new Vector3(0, -1);
+
+                InventoryLoader.inventoryFishSelector.transform.position +=
+                    new Vector3(0, -1);
             }
         }
     }

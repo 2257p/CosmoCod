@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 06951d1cc39cc684e9594a5a6e9d9a02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3444652479615704247
+    second: bardo_3_0
+  - first:
+      213: -3825848600280541143
+    second: bardo_3_1
+  - first:
+      213: -6733140842323972269
+    second: bardo_3_2
+  - first:
+      213: -8830297465099099060
+    second: bardo_3_3
+  - first:
+      213: -5341081694332901419
+    second: bardo_3_4
+  - first:
+      213: -8090371620677878266
+    second: bardo_3_5
+  - first:
+      213: -2338772920878489726
+    second: bardo_3_6
+  - first:
+      213: 1289789440916062955
+    second: bardo_3_7
+  - first:
+      213: 488106372874552080
+    second: bardo_3_8
+  - first:
+      213: 2210505961590429828
+    second: bardo_3_9
+  - first:
+      213: 720927355235445198
+    second: bardo_3_10
+  - first:
+      213: -5447731278251503247
+    second: bardo_3_11
+  - first:
+      213: 7867830183519136652
+    second: bardo_3_12
+  - first:
+      213: -4716597467659282494
+    second: bardo_3_13
+  - first:
+      213: 5013623943639038755
+    second: bardo_3_14
+  - first:
+      213: 8672959643471684802
+    second: bardo_3_15
+  - first:
+      213: -3390312177176402589
+    second: bardo_3_16
+  - first:
+      213: -5241510581912918502
+    second: bardo_3_17
+  - first:
+      213: -2563370759099773711
+    second: bardo_3_18
+  - first:
+      213: -973146721023514304
+    second: bardo_3_19
+  - first:
+      213: -7774076337658190987
+    second: bardo_3_20
+  - first:
+      213: -4122678424327949812
+    second: bardo_3_21
+  - first:
+      213: -4670374820410647524
+    second: bardo_3_22
+  - first:
+      213: 2831350388617222198
+    second: bardo_3_23
+  - first:
+      213: -8035881841020529634
+    second: bardo_3_24
+  - first:
+      213: 7027625183771145010
+    second: bardo_3_25
+  - first:
+      213: 1075162950033713293
+    second: bardo_3_26
+  - first:
+      213: 623322360486203112
+    second: bardo_3_27
+  - first:
+      213: -8427316214139638112
+    second: bardo_3_28
+  - first:
+      213: -5509209033761998293
+    second: bardo_3_29
+  - first:
+      213: -4754582942081910226
+    second: bardo_3_30
+  - first:
+      213: -3100184934678838518
+    second: bardo_3_31
+  - first:
+      213: 871810327060281241
+    second: bardo_3_32
+  - first:
+      213: 4702644692695184602
+    second: bardo_3_33
+  - first:
+      213: 1944323383522751700
+    second: bardo_3_34
+  - first:
+      213: 1046701373635806158
+    second: bardo_3_35
+  - first:
+      213: 5371614925807149418
+    second: bardo_3_36
+  - first:
+      213: 5731596565919786748
+    second: bardo_3_37
+  - first:
+      213: -2381302566959363960
+    second: bardo_3_38
+  - first:
+      213: 5713465994059544867
+    second: bardo_3_39
+  - first:
+      213: -6988979976803581311
+    second: bardo_3_40
+  - first:
+      213: 4135984688997541891
+    second: bardo_3_41
+  - first:
+      213: -5461986871127537205
+    second: bardo_3_42
+  - first:
+      213: 8505055804742951523
+    second: bardo_3_43
+  - first:
+      213: -1417377239283895810
+    second: bardo_3_44
+  - first:
+      213: -7502377889949736916
+    second: bardo_3_45
+  - first:
+      213: 6257189133406307510
+    second: bardo_3_46
+  - first:
+      213: 4898646887403452497
+    second: bardo_3_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bardo_3_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 755
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc992efd2dddcf20800000000000000
+      internalID: 3444652479615704247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 755
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9285adfd7fad7eac0800000000000000
+      internalID: -3825848600280541143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 755
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fea9ed3141f82a0800000000000000
+      internalID: -6733140842323972269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 755
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c446cbb8d3b747580800000000000000
+      internalID: -8830297465099099060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_4
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 755
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d722fc4f7aa0e5b0800000000000000
+      internalID: -5341081694332901419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_5
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 755
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ef79820e939bf80800000000000000
+      internalID: -8090371620677878266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_6
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 755
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f1cb87b620b8fd0800000000000000
+      internalID: -2338772920878489726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_7
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 755
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be20ad4b9a046e110800000000000000
+      internalID: 1289789440916062955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_8
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 755
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013cac7f82a16c600800000000000000
+      internalID: 488106372874552080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_9
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 755
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4881b76d57b4dae10800000000000000
+      internalID: 2210505961590429828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 647
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9aba52c9f310a00800000000000000
+      internalID: 720927355235445198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_11
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 647
+        width: 47
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171d8080445c564b0800000000000000
+      internalID: -5447731278251503247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_12
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 647
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b21c9cdd5203d60800000000000000
+      internalID: 7867830183519136652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_13
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 647
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c759afb7974b8eb0800000000000000
+      internalID: -4716597467659282494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_14
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 647
+        width: 47
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b7ff5d968f39540800000000000000
+      internalID: 5013623943639038755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_15
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 647
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4ad6c28da8c5870800000000000000
+      internalID: 8672959643471684802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_16
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 647
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36528b9990133f0d0800000000000000
+      internalID: -3390312177176402589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_17
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 647
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1621ae75e96247b0800000000000000
+      internalID: -5241510581912918502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_18
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 647
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc0c3c30e31d6cd0800000000000000
+      internalID: -2563370759099773711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_19
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 647
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049ae039630be72f0800000000000000
+      internalID: -973146721023514304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_20
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 539
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5732d1d72ceec1490800000000000000
+      internalID: -7774076337658190987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 539
+        width: 47
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02f3c2e0dd49c6c0800000000000000
+      internalID: -4122678424327949812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_22
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 539
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c9e7578de7f2fb0800000000000000
+      internalID: -4670374820410647524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_23
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 539
+        width: 47
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63891346d2afa4720800000000000000
+      internalID: 2831350388617222198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_24
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 539
+        width: 47
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1495f0aa00da7090800000000000000
+      internalID: -8035881841020529634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_25
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 539
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233b445eed3278160800000000000000
+      internalID: 7027625183771145010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_26
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 539
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88ab60b10fbbee00800000000000000
+      internalID: 1075162950033713293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_27
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 539
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee8655626c76a800800000000000000
+      internalID: 623322360486203112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_28
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 539
+        width: 56
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae21569d882c0b80800000000000000
+      internalID: -8427316214139638112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_29
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 539
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a3e35a29b5b83b0800000000000000
+      internalID: -5509209033761998293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_30
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 431
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a731a4104540eb0800000000000000
+      internalID: -4754582942081910226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_31
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 431
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0343763a3ee9f4d0800000000000000
+      internalID: -3100184934678838518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_32
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 431
+        width: 53
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997f1f79fda491c00800000000000000
+      internalID: 871810327060281241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_33
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 431
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4f8fcae66234140800000000000000
+      internalID: 4702644692695184602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_34
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 431
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4fb5bd0df9bfa10800000000000000
+      internalID: 1944323383522751700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_35
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 431
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3c9798a51a68e00800000000000000
+      internalID: 1046701373635806158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_36
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 431
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61ebe2a05fcb8a40800000000000000
+      internalID: 5371614925807149418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_37
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 431
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf66f7b95b8ba8f40800000000000000
+      internalID: 5731596565919786748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_38
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 431
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88849a99ee9e3fed0800000000000000
+      internalID: -2381302566959363960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_39
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 431
+        width: 50
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3297134ec0f4a4f40800000000000000
+      internalID: 5713465994059544867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_40
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 323
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1820e448db7220f90800000000000000
+      internalID: -6988979976803581311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_41
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 326
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30827284928f56930800000000000000
+      internalID: 4135984688997541891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_42
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 215
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9889a21ef1334b0800000000000000
+      internalID: -5461986871127537205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_43
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 218
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362e3945137080670800000000000000
+      internalID: 8505055804742951523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_44
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 107
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef172c319e6745ce0800000000000000
+      internalID: -1417377239283895810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_45
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 110
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c202dc2fe0332e790800000000000000
+      internalID: -7502377889949736916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_46
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b40e156d5006d650800000000000000
+      internalID: 6257189133406307510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bardo_3_47
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 2
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15871c3d36d7bf340800000000000000
+      internalID: 4898646887403452497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bardo_3_0: 3444652479615704247
+      bardo_3_1: -3825848600280541143
+      bardo_3_10: 720927355235445198
+      bardo_3_11: -5447731278251503247
+      bardo_3_12: 7867830183519136652
+      bardo_3_13: -4716597467659282494
+      bardo_3_14: 5013623943639038755
+      bardo_3_15: 8672959643471684802
+      bardo_3_16: -3390312177176402589
+      bardo_3_17: -5241510581912918502
+      bardo_3_18: -2563370759099773711
+      bardo_3_19: -973146721023514304
+      bardo_3_2: -6733140842323972269
+      bardo_3_20: -7774076337658190987
+      bardo_3_21: -4122678424327949812
+      bardo_3_22: -4670374820410647524
+      bardo_3_23: 2831350388617222198
+      bardo_3_24: -8035881841020529634
+      bardo_3_25: 7027625183771145010
+      bardo_3_26: 1075162950033713293
+      bardo_3_27: 623322360486203112
+      bardo_3_28: -8427316214139638112
+      bardo_3_29: -5509209033761998293
+      bardo_3_3: -8830297465099099060
+      bardo_3_30: -4754582942081910226
+      bardo_3_31: -3100184934678838518
+      bardo_3_32: 871810327060281241
+      bardo_3_33: 4702644692695184602
+      bardo_3_34: 1944323383522751700
+      bardo_3_35: 1046701373635806158
+      bardo_3_36: 5371614925807149418
+      bardo_3_37: 5731596565919786748
+      bardo_3_38: -2381302566959363960
+      bardo_3_39: 5713465994059544867
+      bardo_3_4: -5341081694332901419
+      bardo_3_40: -6988979976803581311
+      bardo_3_41: 4135984688997541891
+      bardo_3_42: -5461986871127537205
+      bardo_3_43: 8505055804742951523
+      bardo_3_44: -1417377239283895810
+      bardo_3_45: -7502377889949736916
+      bardo_3_46: 6257189133406307510
+      bardo_3_47: 4898646887403452497
+      bardo_3_5: -8090371620677878266
+      bardo_3_6: -2338772920878489726
+      bardo_3_7: 1289789440916062955
+      bardo_3_8: 488106372874552080
+      bardo_3_9: 2210505961590429828
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
