@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
         {
             if (inOcean == true)
             {
-
+                SceneManager.LoadScene("TestFishMechScene");
             }
 
             if (inShopArea == true && Shop.inShop == false && InventoryLoader.inventoryOpen == false)

@@ -45,7 +45,7 @@ public class FishCheck : MonoBehaviour
     {
         if (rb.position.y <= -2.25f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 9f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 10f);
         }
     }
 }

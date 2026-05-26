@@ -23,7 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
         jumpPressed = Keyboard.current[jumpKey].wasPressedThisFrame;
 
-        if (rb.position.y < 1.50)
+        if (rb.position.y < 2.50)
         {
             notCeiling = true;
         }
