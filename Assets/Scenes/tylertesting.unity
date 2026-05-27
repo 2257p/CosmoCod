@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 573461541}
   - component: {fileID: 573461540}
   m_Layer: 0
-  m_Name: test
+  m_Name: saveandloader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

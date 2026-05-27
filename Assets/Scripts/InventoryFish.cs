@@ -65,8 +65,8 @@ public class InventoryFish : MonoBehaviour
             fishSprite.AddComponent<SpriteRenderer>();
             fishSprite.GetComponent<SpriteRenderer>().sprite = spr;
             fishSprite.GetComponent<SpriteRenderer>().sortingOrder = 1;
-            fishSprite.transform.localScale = new Vector3(4.5f, 4);
-            fishSprite.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(6f, 2);
+            fishSprite.transform.localScale = new Vector3(3, 3);
+            fishSprite.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(6.3f, 1.7f);
             fishSprite.transform.parent = InventoryLoader.detailsPanel.transform;
         }
 
@@ -74,7 +74,8 @@ public class InventoryFish : MonoBehaviour
         if(fishValueText == null)
         {
             fishValueText = Instantiate(textPrefab);
-            fishValueText.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(4.3f, 2f);
+            fishValueText.GetComponent<TMP_Text>().horizontalAlignment = HorizontalAlignmentOptions.Left;
+            fishValueText.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(13.3f, 2f);
             fishValueText.transform.parent = InventoryLoader.inventoryBg.transform;
         }
 
@@ -82,7 +83,8 @@ public class InventoryFish : MonoBehaviour
         if(fishMassText == null)
         {
             fishMassText = Instantiate(textPrefab);
-            fishMassText.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(4.3f, 1.5f);
+            fishMassText.GetComponent<TMP_Text>().horizontalAlignment = HorizontalAlignmentOptions.Left;
+            fishMassText.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(13.3f, 1.5f);
             fishMassText.transform.parent = InventoryLoader.inventoryBg.transform;
         }
 

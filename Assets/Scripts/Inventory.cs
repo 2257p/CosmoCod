@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public string inventoryToString() //for testing
+    public static string inventoryToString() //for testing
     {
         string r = "";
         foreach(Fish f in inventory)
@@ -46,13 +46,14 @@ public class Inventory : MonoBehaviour
         return r;
     }
 
-    public void addFish(Fish newFish)
+    public static void addFish(Fish newFish)
     {
         if (numberOfFish < maxInventorySpace)
         {
             inventory[numberOfFish] = newFish;
             numberOfFish++;
         }
+        //InventoryLoader.reloadFish();
     }
 
     public static void sellFish(int index)
@@ -69,6 +70,7 @@ public class Inventory : MonoBehaviour
             inventory[maxInventorySpace - 1] = null;
         }
         InventoryLoader.reloadMoney();
+        
     }
 
     public static void sellFish(Fish f)
