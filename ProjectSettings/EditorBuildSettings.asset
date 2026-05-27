@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Info.unity
     guid: bfe49f8aff30e104ba925427b658d5a4
   - enabled: 1
-    path: Assets/Scenes/TestFishMechScene.unity
+    path: Assets/Scenes/Fish Function.unity
     guid: 7ad5fd4e06b374e89afb0fb67588b846
   - enabled: 1
     path: Assets/Scenes/Setting.unity

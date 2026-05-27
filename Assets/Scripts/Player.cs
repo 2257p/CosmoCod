@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         {
             if (inOcean == true)
             {
-                SceneManager.LoadScene("TestFishMechScene");
+                SceneManager.LoadScene("Fish Function");
             }
 
             if (inShopArea == true &&
