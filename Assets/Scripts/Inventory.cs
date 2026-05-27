@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     public static Fish[] inventory = new Fish[maxInventorySpace];
 
     //stuff pertaining to money
-    public static float money = 0f;
+    public static float money;
 
     //stuff pertaining to inventory
     public static int sortingMethod; //0 is value, 1 is mass, 2 is value/mass
@@ -21,14 +21,14 @@ public class Inventory : MonoBehaviour
         
         addFish(new Fish("Cod", 0, 10, 2));
         addFish(new Fish("Salmon", 0, 30, 3));
-        addFish(new Fish("Salmon", 2, 40, 4));
+        addFish(new Fish("Salmon", 0, 40, 4));
         addFish(new Fish("Cod", 0, 5, 1));
         addFish(new Fish("Sunking", 3, 160, 2));
         numberOfFish = 5;
 
         sortingMethod = 2;
         sortByValuePerMass();
-        
+
     }
 
     public string inventoryToString() //for testing
@@ -104,6 +104,7 @@ public class Inventory : MonoBehaviour
                 
             }
         }
+        Inventory.numberOfFish = 0;
 
         for(int i = 0; i < maxInventorySpace; i++)
         {

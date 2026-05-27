@@ -7,6 +7,8 @@ public class InventoryLoader : MonoBehaviour
 {
     public GameObject textPrefab;
 
+    public static GameObject inventoryLoader;
+
     public static GameObject player;
     public static GameObject inventoryBg;
     public static GameObject inventoryTitle;
@@ -48,8 +50,12 @@ public class InventoryLoader : MonoBehaviour
             if (obj.CompareTag("Player"))
             {
                 player = obj;
-                break;
             }
+            else if (obj.CompareTag("InventoryLoader"))
+            {
+                inventoryLoader = obj;
+            }
+            
         }
 
         loadInventory();
@@ -154,7 +160,7 @@ public class InventoryLoader : MonoBehaviour
         }
     }
 
-    public void reloadFish()
+    public static void reloadFish()
     {
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach(GameObject g in allObjects)
@@ -165,7 +171,7 @@ public class InventoryLoader : MonoBehaviour
             }
         }
 
-        loadFish();
+        inventoryLoader.GetComponent<InventoryLoader>().loadFish();
 
     }
 

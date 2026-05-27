@@ -64,6 +64,7 @@ public class InventoryFish : MonoBehaviour
             fishSprite = new GameObject("InventoryDescSprite");
             fishSprite.AddComponent<SpriteRenderer>();
             fishSprite.GetComponent<SpriteRenderer>().sprite = spr;
+            fishSprite.GetComponent<SpriteRenderer>().sortingOrder = 1;
             fishSprite.transform.localScale = new Vector3(4.5f, 4);
             fishSprite.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(6f, 2);
             fishSprite.transform.parent = InventoryLoader.detailsPanel.transform;
@@ -115,7 +116,7 @@ public class InventoryFish : MonoBehaviour
             if (Keyboard.current[Player.interactKey].wasPressedThisFrame && Shop.inShop == true && Shop.shopJustOpened == false)
             {
                 Inventory.sellFish(fish);
-                inventoryLoader.GetComponent<InventoryLoader>().reloadFish();
+                InventoryLoader.reloadFish();
                 fishNameText.GetComponent<TMP_Text>().text = "";
                 fishSprite.GetComponent<SpriteRenderer>().sprite = null;
                 fishValueText.GetComponent<TMP_Text>().text = "";
