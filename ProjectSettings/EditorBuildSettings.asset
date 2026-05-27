@@ -18,14 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Fish Function.unity
     guid: 7ad5fd4e06b374e89afb0fb67588b846
   - enabled: 1
-    path: Assets/Scenes/Setting.unity
-    guid: 336fd9f5c6a70f947bfdecc00e25137d
-<<<<<<< Updated upstream
-=======
-  - enabled: 1
-    path: Assets/Scenes/vincenttests.unity
-    guid: e626aaea72115ee40aac1865b98bf28f
->>>>>>> Stashed changes
+    path: Assets/Scenes/CC Planet.unity
+    guid: 5c3bc577d66c14555bbd719763fd904b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
