@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,5 +45,10 @@ public class GameManager : MonoBehaviour
     {
         return isPaused;
     }
-    //function to call on to know if the game is paused, currently no usage but may be used in the future so i just added it incase
+
+    public static double ReturnQuota(int days)
+    {
+        return Math.Ceiling(500* Math.Pow(1.05, days));
+    }
+
 }
