@@ -58,8 +58,7 @@ public class InventoryLoader : MonoBehaviour
             
         }
 
-        loadInventory();
-
+        reloadInventory();
 
     }
 
@@ -178,6 +177,14 @@ public class InventoryLoader : MonoBehaviour
     public static void reloadMoney()
     {
         moneyText.GetComponent<TMP_Text>().text = "$" + Inventory.money;
+    }
+
+    void reloadInventory()
+    {
+        if (inventoryBg != null) { 
+            Destroy(inventoryBg);
+        }
+        loadInventory();
     }
 
     void loadInventory()

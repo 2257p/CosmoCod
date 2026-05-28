@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FishCheck : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class FishCheck : MonoBehaviour
                 fishRandomizer.Randomizer();
                 isInsideSquare = false;
             }
+        }
+        if (Keyboard.current[Key.A].wasPressedThisFrame)
+        {
+            fishRandomizer.Randomizer();
+            isInsideSquare = false;
         }
     }
 

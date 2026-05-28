@@ -43,9 +43,22 @@ public class Player : MonoBehaviour
     {
         if (Keyboard.current[interactKey].wasPressedThisFrame)
         {
-            if (inOcean == true)
+            if (inOcean == true && InventoryLoader.inventoryOpen == false)
             {
+
                 SceneManager.LoadScene("Fish Function");
+                InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
+
+                GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+                foreach (GameObject obj in allObjects)
+                {
+                    if (obj.name == "Goal")
+                    {
+                        obj.GetComponent<FishRandomizer>().previousPosition = this.transform.position;
+                        break;
+                    }
+                }
+
             }
 
             if (inShopArea == true &&
