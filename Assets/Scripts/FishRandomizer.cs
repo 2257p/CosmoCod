@@ -7,6 +7,8 @@ public class FishRandomizer : MonoBehaviour
     // Second check: 0 is bad, 1 is mediocre, 2 is good, 3 is great
     // Third check: Weight is randomized between 1 and 4
 
+    public Vector3 previousPosition;
+
     int[] fishScale = {0, 0, 0, 0, 1, 1, 1, 2, 2, 3};
     public void Randomizer()
     {
@@ -20,13 +22,20 @@ public class FishRandomizer : MonoBehaviour
         float fishPrice = (20f * fishRarity + 5f * fishType) * fishMass;
         int valuePerMass = 20 * fishRarity + 5 * fishType;
 
-        Debug.Log(fishRarity);
-        Debug.Log(fishType);
-        Debug.Log(fishMass);
-        Debug.Log(fishPrice);
-        Debug.Log($"${valuePerMass}/kg");
+        SceneManager.LoadScene("CC Planet");
+        Player.selectorX = 0;
+        Player.selectorY = 0;
+        Player.upperButtons = false;
 
-        SceneManager.LoadScene("vincenttests");
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        foreach(GameObject obj in allObjects)
+        {
+            if (obj.CompareTag("Player"))
+            {
+                obj.transform.position = previousPosition;
+                break;
+            }
+        }
 
         if (valuePerMass == 5)
         {

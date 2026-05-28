@@ -18,13 +18,6 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        
-        addFish(new Fish("Cod", 0, 10, 2));
-        addFish(new Fish("Salmon", 0, 30, 3));
-        addFish(new Fish("Salmon", 0, 40, 4));
-        addFish(new Fish("Cod", 0, 5, 1));
-        addFish(new Fish("Sunking", 3, 160, 2));
-        numberOfFish = 5;
 
         sortingMethod = 2;
         sortByValuePerMass();
