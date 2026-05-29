@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: dccc7dbc4e7afe140bf73d8b19571f81
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1304391401504358952
+    second: game paused_0
+  - first:
+      213: -5084260448603806394
+    second: game paused_1
+  - first:
+      213: -6398463925461072444
+    second: game paused_2
+  - first:
+      213: 7685887188046006165
+    second: game paused_3
+  - first:
+      213: -3923565292833833220
+    second: game paused_4
+  - first:
+      213: -751095263629347051
+    second: game paused_5
+  - first:
+      213: 6763888723531231207
+    second: game paused_6
+  - first:
+      213: 7259784980689267571
+    second: game paused_7
+  - first:
+      213: 9006805073500484526
+    second: game paused_8
+  - first:
+      213: 6093665657007355528
+    second: game paused_9
+  - first:
+      213: -4925191914122251654
+    second: game paused_10
+  - first:
+      213: -2680392828077014532
+    second: game paused_11
+  - first:
+      213: 6762109534048255458
+    second: game paused_12
+  - first:
+      213: 6899870947850756453
+    second: game paused_13
+  - first:
+      213: 431418590093697950
+    second: game paused_14
+  - first:
+      213: -5087776237511509078
+    second: game paused_15
+  - first:
+      213: 5190723272923022398
+    second: game paused_16
+  - first:
+      213: 5348098486264081383
+    second: game paused_17
+  - first:
+      213: 4181521110346828080
+    second: game paused_18
+  - first:
+      213: 6375913047577660456
+    second: game paused_19
+  - first:
+      213: -2678401493094917062
+    second: game paused_20
+  - first:
+      213: 6197418088119639138
+    second: game paused_21
+  - first:
+      213: 5136631522021012359
+    second: game paused_22
+  - first:
+      213: -1525248757878199717
+    second: game paused_23
+  - first:
+      213: 4771671823011691646
+    second: game paused_24
+  - first:
+      213: 4081404937737929860
+    second: game paused_25
+  - first:
+      213: 5958685111212729862
+    second: game paused_26
+  - first:
+      213: 8340077195708329892
+    second: game paused_27
+  - first:
+      213: 6484675293314952646
+    second: game paused_28
+  - first:
+      213: -4461508127921433979
+    second: game paused_29
+  - first:
+      213: 6854373267659705398
+    second: game paused_30
+  - first:
+      213: 88755983846285706
+    second: game paused_31
+  - first:
+      213: 4868740083246203358
+    second: game paused_32
+  - first:
+      213: -658725540331041023
+    second: game paused_33
+  - first:
+      213: -2921588964421760394
+    second: game paused_34
+  - first:
+      213: -4878164186245075023
+    second: game paused_35
+  - first:
+      213: 5043472527855954114
+    second: game paused_36
+  - first:
+      213: -3103402126606004463
+    second: game paused_37
+  - first:
+      213: -521840631000172012
+    second: game paused_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: game paused_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 421
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd32496eeed5ede0800000000000000
+      internalID: -1304391401504358952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 431
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645e66f3f041179b0800000000000000
+      internalID: -5084260448603806394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 425
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5cdb6d5f61437a0800000000000000
+      internalID: -6398463925461072444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 431
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597453b0da1c9aa60800000000000000
+      internalID: 7685887188046006165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_4
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 421
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe76937722bc89c0800000000000000
+      internalID: -3923565292833833220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_5
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 423
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517f4e256d29395f0800000000000000
+      internalID: -751095263629347051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 410
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef695a15f82edd50800000000000000
+      internalID: 6763888723531231207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_7
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 418
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b23b7d9ffefb460800000000000000
+      internalID: 7259784980689267571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_8
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 377
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3be278e799efc70800000000000000
+      internalID: 9006805073500484526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_9
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 410
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886bbe121ac019450800000000000000
+      internalID: 6093665657007355528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 82
+        width: 230
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72fd148c0436abb0800000000000000
+      internalID: -4925191914122251654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_11
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 398
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf107f79ce45dcad0800000000000000
+      internalID: -2680392828077014532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_12
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 398
+        width: 52
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed7a354bc6d7dd50800000000000000
+      internalID: 6762109534048255458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_13
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 398
+        width: 56
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561aeaae11441cf50800000000000000
+      internalID: 6899870947850756453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_14
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 398
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93e8040ce4bcf500800000000000000
+      internalID: 431418590093697950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_15
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 82
+        width: 227
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aabf37ad7769469b0800000000000000
+      internalID: -5087776237511509078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 308
+        width: 247
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e340ee9a057290840800000000000000
+      internalID: 5190723272923022398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 126
+        width: 504
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb2391ec33483a40800000000000000
+      internalID: 5348098486264081383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_18
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 308
+        width: 244
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03905039b4fb70a30800000000000000
+      internalID: 4181521110346828080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_19
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 282
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c05afb22bcb7850800000000000000
+      internalID: 6375913047577660456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_20
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 251
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c9336680864dad0800000000000000
+      internalID: -2678401493094917062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_21
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 212
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c93f27ae6a10650800000000000000
+      internalID: 6197418088119639138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_22
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 213
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783f22c772bf84740800000000000000
+      internalID: 5136631522021012359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_23
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 94
+        width: 135
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a6098f55a35dae0800000000000000
+      internalID: -1525248757878199717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_24
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 73
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c3a5bdd32683240800000000000000
+      internalID: 4771671823011691646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_25
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 94
+        width: 236
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484056aaa2014a830800000000000000
+      internalID: 4081404937737929860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_26
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 79
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6066e36c98081b250800000000000000
+      internalID: 5958685111212729862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 77
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afe7899508edb370800000000000000
+      internalID: 8340077195708329892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_28
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 82
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd2acd62d13ef950800000000000000
+      internalID: 6484675293314952646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_29
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 82
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58299b8eef98512c0800000000000000
+      internalID: -4461508127921433979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_30
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 82
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c4ac0cb20af1f50800000000000000
+      internalID: 6854373267659705398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_31
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 60
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8129d8d8135b3100800000000000000
+      internalID: 88755983846285706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_32
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 82
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1889d5f4d319340800000000000000
+      internalID: 4868740083246203358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_33
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 82
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f47147c9cbbd6f0800000000000000
+      internalID: -658725540331041023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_34
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 74
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a80fbe05e6477d0800000000000000
+      internalID: -2921588964421760394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_35
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 60
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf64daa4874d4cb0800000000000000
+      internalID: -4878164186245075023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_36
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 63
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8ab49ea830ef540800000000000000
+      internalID: 5043472527855954114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_37
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 57
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f057855308ee4d0800000000000000
+      internalID: -3103402126606004463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game paused_38
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 60
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a7edff5bc02c8f0800000000000000
+      internalID: -521840631000172012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      game paused_0: -1304391401504358952
+      game paused_1: -5084260448603806394
+      game paused_10: -4925191914122251654
+      game paused_11: -2680392828077014532
+      game paused_12: 6762109534048255458
+      game paused_13: 6899870947850756453
+      game paused_14: 431418590093697950
+      game paused_15: -5087776237511509078
+      game paused_16: 5190723272923022398
+      game paused_17: 5348098486264081383
+      game paused_18: 4181521110346828080
+      game paused_19: 6375913047577660456
+      game paused_2: -6398463925461072444
+      game paused_20: -2678401493094917062
+      game paused_21: 6197418088119639138
+      game paused_22: 5136631522021012359
+      game paused_23: -1525248757878199717
+      game paused_24: 4771671823011691646
+      game paused_25: 4081404937737929860
+      game paused_26: 5958685111212729862
+      game paused_27: 8340077195708329892
+      game paused_28: 6484675293314952646
+      game paused_29: -4461508127921433979
+      game paused_3: 7685887188046006165
+      game paused_30: 6854373267659705398
+      game paused_31: 88755983846285706
+      game paused_32: 4868740083246203358
+      game paused_33: -658725540331041023
+      game paused_34: -2921588964421760394
+      game paused_35: -4878164186245075023
+      game paused_36: 5043472527855954114
+      game paused_37: -3103402126606004463
+      game paused_38: -521840631000172012
+      game paused_4: -3923565292833833220
+      game paused_5: -751095263629347051
+      game paused_6: 6763888723531231207
+      game paused_7: 7259784980689267571
+      game paused_8: 9006805073500484526
+      game paused_9: 6093665657007355528
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

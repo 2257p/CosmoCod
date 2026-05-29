@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   PauseMenu: {fileID: 1353185983}
-  DigitalClock: {fileID: 0}
+  DigitalClock: {fileID: 1399963971}
 --- !u!4 &198086751
 Transform:
   m_ObjectHideFlags: 0
@@ -13680,6 +13680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5923ccbf36c7da40affd5a8e716a263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DigitalClock
+  days: 0
   _24HourClock: 1
 --- !u!1001 &1417644882
 PrefabInstance:
@@ -14224,6 +14225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5923ccbf36c7da40affd5a8e716a263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DigitalClock
+  days: 0
   _24HourClock: 1
 --- !u!114 &1992088851
 MonoBehaviour:

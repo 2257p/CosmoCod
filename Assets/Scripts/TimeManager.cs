@@ -12,22 +12,19 @@ public class TimeManager : MonoBehaviour
     float currentTime = 0;
 
     private float timer = 0f;
-    private int dayCount = 0;
+    private int dayCount = 1;
 
     private bool isSunset = false;
     private bool isSunrise = false;
     private bool isNight = false;
     private bool isDay = false;
 
-
-
-    // Update is called once per frame
     void Update()
     {
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
 
-         if (!GameManager.getIsPaused())
+        if (!GameManager.getIsPaused())
         {
             timer += Time.deltaTime;
 
@@ -35,31 +32,38 @@ public class TimeManager : MonoBehaviour
             {
                 timer -= dayDuration;
                 dayCount++;
+                // reset flags for new day
+                isSunrise = false;
+                isSunset = false;
+                isNight = false;
+                isDay = false;
             }
         }
 
-        if (currentTime >= (dayDuration * 6f / 24f) && isSunrise == false)
+        int hour = Mathf.FloorToInt(GetHour()); // whole number hour, 0-23
+
+        if (hour == 6 && !isSunrise)
         {
             isSunrise = true;
             isNight = false;
             Debug.Log("its sunrise now");
         }
 
-        if (currentTime >= (dayDuration * 8f / 24f) && isDay == false)
+        if (hour == 8 && !isDay)
         {
             isDay = true;
             isSunrise = false;
             Debug.Log("its day time now");
         }
 
-        if (currentTime >= (dayDuration * 18f / 24f) && isSunset == false)
+        if (hour == 18 && !isSunset)
         {
             isSunset = true;
             isDay = false;
             Debug.Log("its sunset now");
         }
 
-        if (currentTime >= (dayDuration * 20f / 24f) && isNight == false)
+        if (hour == 20 && !isNight)
         {
             isNight = true;
             isSunset = false;

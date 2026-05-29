@@ -21,11 +21,12 @@ public class MainMenu : MonoBehaviour
 
     public void Info()
     {
-        SceneManager.LoadScene("Info");
+        SceneManager.LoadScene("INFO");
     }
 
     public void Previous()
     {
+        Debug.Log("working button");
         SceneManager.LoadScene("MAINMENU");
     }
     public void Quit()
