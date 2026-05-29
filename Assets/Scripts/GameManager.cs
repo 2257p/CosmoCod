@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         return isPaused;
     }
 
+    
     public static double ReturnQuota(int days)
     {
         return Math.Ceiling(500* Math.Pow(1.05, days));
