@@ -18,10 +18,8 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-
         sortingMethod = 2;
         sortByValuePerMass();
-
     }
 
     public static string inventoryToString() //for testing
@@ -63,7 +61,6 @@ public class Inventory : MonoBehaviour
             inventory[maxInventorySpace - 1] = null;
         }
         InventoryLoader.reloadMoney();
-        
     }
 
     public static void sellFish(Fish f)
@@ -99,6 +96,7 @@ public class Inventory : MonoBehaviour
                 
             }
         }
+
         Inventory.numberOfFish = 0;
 
         for(int i = 0; i < maxInventorySpace; i++)
@@ -106,10 +104,9 @@ public class Inventory : MonoBehaviour
             inventory[i] = null;
         }
         InventoryLoader.reloadMoney();
-
     }
 
-    //sorting method 0
+    //sorting method 0 (By Value)
     public static void sortByValue()
     {
         sortingMethod = 0;
@@ -139,7 +136,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //sorting method 1
+    //sorting method 1 (By Mass)
     public static void sortByMass()
     {
         sortingMethod = 1;
@@ -169,7 +166,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //sorting method 2
+    //sorting method 2 (By Value Per Mass)
     public static void sortByValuePerMass()
     {
         sortingMethod = 2;
@@ -198,5 +195,4 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
 }

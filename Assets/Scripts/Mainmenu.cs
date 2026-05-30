@@ -5,8 +5,6 @@ using System;
 
 public class MainMenu : MonoBehaviour
 {
-
-
     private bool soundOn = true;
 
     public void Play()
@@ -26,7 +24,6 @@ public class MainMenu : MonoBehaviour
 
     public void Previous()
     {
-        Debug.Log("working button");
         SceneManager.LoadScene("MAINMENU");
     }
     public void Quit()
@@ -35,8 +32,8 @@ public class MainMenu : MonoBehaviour
 
         Application.Quit();
 
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #endif
     }
 }

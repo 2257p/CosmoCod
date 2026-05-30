@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if ((Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame)
         {
             if (isPaused)
                 ResumeGame();
@@ -33,10 +33,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
     }
+
     public void ResumeGame()
     {
         PauseMenu.SetActive(false);
-         DigitalClock.SetActive(true);
+        DigitalClock.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }  
@@ -45,11 +46,9 @@ public class GameManager : MonoBehaviour
     {
         return isPaused;
     }
-
     
     public static double ReturnQuota(int days)
     {
-        return Math.Ceiling(500* Math.Pow(1.05, days));
+        return Math.Ceiling(500 * Math.Pow(1.20, days));
     }
-
 }

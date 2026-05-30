@@ -28,14 +28,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
 
-    // ANIMATOR
     private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        // Get Animator automatically
         animator = GetComponent<Animator>();
     }
 
@@ -45,7 +42,6 @@ public class Player : MonoBehaviour
         {
             if (inOcean == true && InventoryLoader.inventoryOpen == false)
             {
-
                 SceneManager.LoadScene("Fish Function");
                 InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
 
@@ -58,7 +54,6 @@ public class Player : MonoBehaviour
                         break;
                     }
                 }
-
             }
 
             if (inShopArea == true &&

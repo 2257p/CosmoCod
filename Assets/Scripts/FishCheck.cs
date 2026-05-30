@@ -10,20 +10,12 @@ public class FishCheck : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        fishRandomizer = FindFirstObjectByType<FishRandomizer>();
+        fishRandomizer = FindFirstObjectByType<FishRandomizer>(); // AI
     }
 
     void Update()
     {
-        if (isInsideSquare)
-        {
-            if (Time.time - enterTime >= 1.3f)
-            {
-                fishRandomizer.Randomizer();
-                isInsideSquare = false;
-            }
-        }
-        if (Keyboard.current[Key.A].wasPressedThisFrame)
+        if (isInsideSquare && Time.time - enterTime >= 1.3f)
         {
             fishRandomizer.Randomizer();
             isInsideSquare = false;

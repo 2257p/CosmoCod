@@ -7,19 +7,17 @@ public class CameraBounds : MonoBehaviour
 
     void LateUpdate()
     {
-        float diffX = player.position.x - transform.position.x;
-        float diffY = player.position.y - transform.position.y;
-
+        float difX = player.position.x - transform.position.x;
+        float difY = player.position.y - transform.position.y;
         float newX = transform.position.x;
         float newY = transform.position.y;
 
-        // only move camera in the direction of the player
-        if (diffX > 0) newX += diffX;
-        if (diffX < 0) newX += diffX;
-        if (diffY > 0) newY += diffY;
-        if (diffY < 0) newY += diffY;
+        if (difX > 0) newX += difX;
+        if (difX < 0) newX += difX;
+        if (difY > 0) newY += difY;
+        if (difY < 0) newY += difY;
 
-        // clamp to bounds
+        // AI
         newX = Mathf.Clamp(newX, minX, maxX);
         newY = Mathf.Clamp(newY, minY, maxY);
 

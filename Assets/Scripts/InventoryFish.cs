@@ -125,7 +125,9 @@ public class InventoryFish : MonoBehaviour
                 fishMassText.GetComponent<TMP_Text>().text = "";
             }
 
-        } else
+        }
+        
+        else
         {
             if(lerpingOut == true) 
             {

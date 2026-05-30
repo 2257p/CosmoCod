@@ -8,9 +8,7 @@ public class DigitalClock : MonoBehaviour
 {
     TimeManager tm;
     TextMeshProUGUI display;
-
     public int days;
-
     public bool _24HourClock = true;
 
     void Start()
@@ -27,5 +25,4 @@ public class DigitalClock : MonoBehaviour
             display.text = "Day " + days + "  " + tm.Clock24Hour();
         }
     }
-
 }
