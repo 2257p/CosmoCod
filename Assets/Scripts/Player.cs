@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    public static float posX;
+    public static float posY;
 
     private Animator animator;
 
@@ -34,10 +36,15 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        transform.position = new Vector2(posX, posY);
     }
 
     void Update()
     {
+        Debug.Log($"Player Position - X: {transform.position.x}, Y: {transform.position.y}");
+        posX = transform.position.x;
+        posY = transform.position.y;
+
         if (Keyboard.current[interactKey].wasPressedThisFrame)
         {
             if (inOcean == true && InventoryLoader.inventoryOpen == false)
@@ -135,6 +142,7 @@ public class Player : MonoBehaviour
             animator.SetFloat("MoveX", moveInput.x);
             animator.SetFloat("MoveY", moveInput.y);
         }
+        
         else
         {
             moveInput = Vector2.zero;

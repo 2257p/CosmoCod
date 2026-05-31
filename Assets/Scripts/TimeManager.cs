@@ -8,11 +8,11 @@ public class TimeManager : MonoBehaviour
 
     public float dayDuration;
 
-    float totalTime = 0;
+    static float totalTime = 0;
     float currentTime = 0;
 
-    private float timer = 0f;
-    private int dayCount = 1;
+    static private float timer = 0f;
+    static private int dayCount = 1;
 
     private bool isSunset = false;
     private bool isSunrise = false;
