@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     float walkSpd = 6f;
 
     public static bool inOcean = false;
-    bool inShopArea = false;
+    public static bool inShopArea = false;
+    public static bool inShopBuyArea = false;
 
     Key upKey = Key.UpArrow;
     Key downKey = Key.DownArrow;
@@ -41,7 +42,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Player Position - X: {transform.position.x}, Y: {transform.position.y}");
         posX = transform.position.x;
         posY = transform.position.y;
 
@@ -52,15 +52,6 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene("Fish Function");
                 InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
 
-                GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-                foreach (GameObject obj in allObjects)
-                {
-                    if (obj.name == "Goal")
-                    {
-                        obj.GetComponent<FishRandomizer>().previousPosition = this.transform.position;
-                        break;
-                    }
-                }
             }
 
             if (inShopArea == true &&
@@ -69,7 +60,16 @@ public class Player : MonoBehaviour
             {
                 Shop.Interact();
             }
+
+            if(inShopArea == false && Shop.inShop == false && inShopBuyArea == true && InventoryLoader.inventoryOpen == false)
+            {
+                ShopBuy.inShopBuy = true;
+                ShopBuy.OpenShopBuy();
+            }
+
         }
+
+        
 
         if ((Keyboard.current[showInventoryKey].wasPressedThisFrame ||
              Keyboard.current[cancelKey].wasPressedThisFrame)
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
 
         if (InventoryLoader.inventoryOpen == false &&
             Shop.inShop == false &&
-            inCutscene == false)
+            inCutscene == false && ShopBuy.inShopBuy == false)
         {
             playerMovement();
         }
@@ -272,4 +272,10 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void shopBuySelection()
+    {
+
+    }
+
 }

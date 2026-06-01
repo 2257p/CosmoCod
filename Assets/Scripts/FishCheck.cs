@@ -15,7 +15,7 @@ public class FishCheck : MonoBehaviour
 
     void Update()
     {
-        if (isInsideSquare && Time.time - enterTime >= 1.3f)
+        if (isInsideSquare && Time.time - enterTime + 0.3f*ShopBuy.rodTier >= 1.3f || Keyboard.current[Key.A].wasPressedThisFrame)
         {
             fishRandomizer.Randomizer();
             isInsideSquare = false;
