@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
             if (inOcean == true && InventoryLoader.inventoryOpen == false)
             {
                 SceneManager.LoadScene("Fish Function");
-                InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
+                //InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
 
             }
 
