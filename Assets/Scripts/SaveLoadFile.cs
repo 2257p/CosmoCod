@@ -40,6 +40,7 @@ public class SaveLoadFile
 
         string json = JsonUtility.ToJson(save);
         File.WriteAllText(saveDataFilePath, json);
+
     }
 
     public static void Load()

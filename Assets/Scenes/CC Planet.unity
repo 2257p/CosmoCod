@@ -6705,6 +6705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c718998d334b3674aab2ff3cad430821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveLoadTest
+  textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
 --- !u!1 &622002145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6841,12 +6842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryLoader
   textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
-  inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
-  inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
-  sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
-  moneyBagIcon: {fileID: 277084775324213737, guid: a03243ac7ecb1b64e8b1d2f58e67b8d8, type: 3}
-  codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
   salmonSprite: {fileID: -3255037359050697509, guid: e0bb882ada50fd24e877cb8a5eb66cfb, type: 3}
+  codSprite: {fileID: -6653754098072910144, guid: 309b4aa089067f449b7e52241d84a10b, type: 3}
   pikeSprite: {fileID: 6508466257912415314, guid: 9475152faf3804298b317335e4c7538d, type: 3}
   blueySprite: {fileID: -7885042113601330170, guid: 66b5c00c2fe38405394698a6620b7dd6, type: 3}
   redfinSprite: {fileID: -6818252685222333559, guid: f0923648e44d6405183d6f0419f90887, type: 3}
@@ -6861,6 +6858,10 @@ MonoBehaviour:
   goldkingSprite: {fileID: -5810789870731041425, guid: 7c1894e5525474276845eed5047438e6, type: 3}
   rainbowkingSprite: {fileID: -6410140015447674141, guid: 205c2de467ecd4774af322f50f9e8b2a, type: 3}
   sunkingSprite: {fileID: 5325584982730375599, guid: 1a5d546b7fd1d4321b270471f93292e3, type: 3}
+  inventoryFishSelectorSprite: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
+  inventoryBgSprite: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
+  sortingMethodSwitchButton: {fileID: -3442875575969496929, guid: 65307a63e4f2d004fa3ee490973f6fbc, type: 3}
+  moneyBagIcon: {fileID: 277084775324213737, guid: a03243ac7ecb1b64e8b1d2f58e67b8d8, type: 3}
 --- !u!4 &686010592
 Transform:
   m_ObjectHideFlags: 0
