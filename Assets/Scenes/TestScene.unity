@@ -217,6 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+  m_IsActive: 0
   m_IsActive: 1
 --- !u!224 &32101256
 RectTransform:
@@ -7938,6 +7939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b9d74bc36a8e34f856f09f9ca38ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  dayDuration: 24
   dayDuration: 600
 --- !u!4 &910297296
 Transform:
