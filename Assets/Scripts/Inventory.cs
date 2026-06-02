@@ -106,6 +106,11 @@ public class Inventory : MonoBehaviour
         InventoryLoader.reloadMoney();
     }
 
+    public static float ReturnMoney()
+    {
+        return money;
+    }
+
     //sorting method 0 (By Value)
     public static void sortByValue()
     {

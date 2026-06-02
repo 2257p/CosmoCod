@@ -10,11 +10,8 @@ public class QuotaDisplay : MonoBehaviour
     void Start()
     {
         tm = Object.FindFirstObjectByType<TimeManager>();
-        // find QuotaText specifically by name instead
+ 
         display = transform.Find("QuotaText").GetComponent<TextMeshProUGUI>();
-
-        if (tm == null) Debug.LogError("TimeManager not found!", this);
-        if (display == null) Debug.LogError("QuotaText not found!", this);
     }
 
     void Update()

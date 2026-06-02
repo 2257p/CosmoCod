@@ -26,6 +26,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MAINMENU");
     }
+    
+    public static void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
+    
     public void Quit()
     {
         Debug.Log("QUIT GAME");

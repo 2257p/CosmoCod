@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour
     private bool isSunrise = false;
     private bool isNight = false;
     private bool isDay = false;
-
+    
     void Update()
     {
         totalTime += Time.deltaTime;
@@ -32,11 +32,27 @@ public class TimeManager : MonoBehaviour
             {
                 timer -= dayDuration;
                 dayCount++;
-                // reset flags for new day
+
                 isSunrise = false;
                 isSunset = false;
                 isNight = false;
                 isDay = false;
+
+                double quota = GameManager.ReturnQuota(dayCount);
+                float money = Inventory.ReturnMoney();
+
+                if (money >= quota)
+                {
+                    Debug.Log("this should display if the player passes the quota");
+                }
+                else
+                {
+                    Debug.Log("this message should display if the player doesnt meet quota please work");
+                    MainMenu.GameOver();
+                }
+
+                //check to see if quota is greater than player balance, if yes send to game over scene
+                //if no, subtract quota from player balance, send message about new quota
             }
         }
 
