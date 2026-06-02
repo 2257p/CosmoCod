@@ -83,7 +83,7 @@ public class InventoryLoader : MonoBehaviour
 
     void OpenCloseInventory()
     {
-        if (Keyboard.current[Player.showInventoryKey].wasPressedThisFrame)
+        if (Keyboard.current[Player.showInventoryKey].wasPressedThisFrame && ShopBuy.inShopBuy == false)
         {
             
             if(Player.inCutscene == false && inventoryOpen == false && Shop.inShop == false)
@@ -100,7 +100,7 @@ public class InventoryLoader : MonoBehaviour
         }
 
         //another option to close inventory
-        if (Keyboard.current[Player.cancelKey].wasPressedThisFrame && inventoryOpen == true)
+        if (Keyboard.current[Player.cancelKey].wasPressedThisFrame && inventoryOpen == true && ShopBuy.inShopBuy == false)
         {
             inventoryOpen = false;
             inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);

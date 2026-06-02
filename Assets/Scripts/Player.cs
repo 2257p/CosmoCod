@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
 
         if (Keyboard.current[interactKey].wasPressedThisFrame)
         {
+            //when fishing
             if (inOcean == true && InventoryLoader.inventoryOpen == false)
             {
                 SceneManager.LoadScene("Fish Function");
@@ -54,23 +56,26 @@ public class Player : MonoBehaviour
 
             }
 
+            //when opening shop sell
             if (inShopArea == true &&
                 Shop.inShop == false &&
-                InventoryLoader.inventoryOpen == false)
+                InventoryLoader.inventoryOpen == false && ShopBuy.inShopBuy == false)
             {
                 Shop.Interact();
             }
 
-            if(inShopArea == false && Shop.inShop == false && inShopBuyArea == true && InventoryLoader.inventoryOpen == false)
+            //when opening shop buy
+            if(inShopArea == false && Shop.inShop == false && inShopBuyArea == true && ShopBuy.inShopBuy == false && InventoryLoader.inventoryOpen == false)
             {
                 ShopBuy.inShopBuy = true;
                 ShopBuy.OpenShopBuy();
+                
             }
 
         }
 
         
-
+        //when in shop sell, close it
         if ((Keyboard.current[showInventoryKey].wasPressedThisFrame ||
              Keyboard.current[cancelKey].wasPressedThisFrame)
              && Shop.inShop == true)
@@ -78,14 +83,24 @@ public class Player : MonoBehaviour
             Shop.CloseShop();
         }
 
+        //when in shop buy, close it
+        if ((Keyboard.current[Player.cancelKey].wasPressedThisFrame || Keyboard.current[Player.showInventoryKey].wasPressedThisFrame) && ShopBuy.inShopBuy == true)
+        {
+            ShopBuy.inShopBuy = false;
+            ShopBuy.CloseShopBuy();
+        }
+
+        //when walking
         if (InventoryLoader.inventoryOpen == false &&
             Shop.inShop == false &&
             inCutscene == false && ShopBuy.inShopBuy == false)
         {
             playerMovement();
         }
-        else if (InventoryLoader.inventoryOpen == true ||
-                 Shop.inShop == true)
+
+        //controls in shop sell/inventory
+        else if ((InventoryLoader.inventoryOpen == true ||
+                 Shop.inShop == true) && ShopBuy.inShopBuy == false)
         {
             moveInput = Vector2.zero;
 
@@ -94,6 +109,11 @@ public class Player : MonoBehaviour
             animator.SetFloat("MoveY", 0f);
 
             inventorySelection();
+        }
+
+        else if (InventoryLoader.inventoryOpen == false && ShopBuy.inShopBuy == true && !Keyboard.current[interactKey].wasPressedThisFrame)
+        {
+            shopBuySelection();
         }
     }
 
@@ -275,7 +295,16 @@ public class Player : MonoBehaviour
 
     private void shopBuySelection()
     {
-
+        if (Keyboard.current[upKey].wasPressedThisFrame && ShopBuy.selectorIndex > 1)
+        {
+            ShopBuy.selectorIndex--;
+            ShopBuy.selectorObj.transform.position += new Vector3(0, 1.5f);
+        }
+        if (Keyboard.current[downKey].wasPressedThisFrame && ShopBuy.selectorIndex < 3)
+        {
+            ShopBuy.selectorIndex++;
+            ShopBuy.selectorObj.transform.position += new Vector3(0, -1.5f);
+        }
     }
 
 }
