@@ -10,6 +10,7 @@ public class SaveLoadFile
 
     public int day;
     public float money;
+    public int rodTier;
 
     public string[] fishNames = new string[Inventory.maxInventorySpace];
     public int[] fishRarities = new int[Inventory.maxInventorySpace];
@@ -27,6 +28,7 @@ public class SaveLoadFile
         //still need to add day
         save.money = Inventory.money;
         save.numberOfFish = Inventory.numberOfFish;
+        save.rodTier = ShopBuy.rodTier;
         for(int i = 0; i < Inventory.numberOfFish; i++)
         {
             if (Inventory.inventory[i] != null)
@@ -52,6 +54,11 @@ public class SaveLoadFile
 
             Inventory.money = save.money;
             Inventory.numberOfFish = save.numberOfFish;
+
+            //rodtier and shopbuy stuff
+            ShopBuy.rodTier = save.rodTier;
+            ShopBuy.reloadShopBuy();
+
             for(int i = 0; i < Inventory.maxInventorySpace; i++)
             {
                 if (save.fishNames[i] != "")
