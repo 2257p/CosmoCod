@@ -21,7 +21,7 @@ public class FishRandomizer : MonoBehaviour
         float fishPrice = (20f * fishRarity + 5f * fishType) * fishMass;
         int valuePerMass = 20 * fishRarity + 5 * fishType;
 
-        SceneManager.LoadScene("Jiahao planet");
+        SceneManager.LoadScene("CC Planet");
         Player.selectorX = 0;
         Player.selectorY = 0;
         Player.upperButtons = false;

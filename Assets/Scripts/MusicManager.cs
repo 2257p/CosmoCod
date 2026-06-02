@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        GetComponent<AudioSource>().volume = 0.5f;
     }
 
     void OnEnable()
@@ -26,7 +27,10 @@ public class MusicManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.clip = MainTheme;
-        audioSource.Play();
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = MainTheme;
+            audioSource.Play();
+        }
     }
 }
