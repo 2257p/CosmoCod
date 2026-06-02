@@ -36,6 +36,7 @@ public class SaveLoadTest : MonoBehaviour
             GameObject txt = Instantiate(textPrefab);
             txt.GetComponent<TMP_Text>().text = "game saved";
             txt.transform.position = player.transform.position + new Vector3(-6f, 3f);
+            txt.transform.parent = player.transform;
             StartCoroutine(textFadeOut(txt));
         }
     }
@@ -48,6 +49,7 @@ public class SaveLoadTest : MonoBehaviour
             GameObject txt = Instantiate(textPrefab);
             txt.GetComponent<TMP_Text>().text = "game loaded";
             txt.transform.position = player.transform.position + new Vector3(-6f, 3f);
+            txt.transform.parent = player.transform;
             StartCoroutine(textFadeOut(txt));
         }
     }

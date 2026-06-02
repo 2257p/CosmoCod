@@ -25,6 +25,7 @@ public class FishRandomizer : MonoBehaviour
         Player.selectorX = 0;
         Player.selectorY = 0;
         Player.upperButtons = false;
+        ShopBuy.selectorIndex = 1;
 
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach(GameObject obj in allObjects)

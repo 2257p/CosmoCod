@@ -39,11 +39,12 @@ public class TimeManager : MonoBehaviour
                 isDay = false;
 
                 double quota = GameManager.ReturnQuota(dayCount);
-                float money = Inventory.ReturnMoney();
 
-                if (money >= quota)
+
+                if (Inventory.money >= quota)
                 {
                     Debug.Log("this should display if the player passes the quota");
+                    Inventory.money -= (float)quota;
                 }
                 else
                 {
@@ -51,12 +52,10 @@ public class TimeManager : MonoBehaviour
                     MainMenu.GameOver();
                 }
 
-                //check to see if quota is greater than player balance, if yes send to game over scene
-                //if no, subtract quota from player balance, send message about new quota
             }
         }
 
-        int hour = Mathf.FloorToInt(GetHour()); // whole number hour, 0-23
+        int hour = Mathf.FloorToInt(GetHour());
 
         if (hour == 6 && !isSunrise)
         {

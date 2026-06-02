@@ -1,3 +1,4 @@
+using Unity.Properties;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -200,4 +201,5 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
 }

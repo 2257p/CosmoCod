@@ -13,9 +13,9 @@ public class ShopBuy : MonoBehaviour
     public static bool shopBuyJustOpened = false;
     public static int selectorIndex = 1;
 
-    int rod1Price = 200;
-    int rod2Price = 1000;
-    int rod3Price = 3000;
+    static int rod1Price = 200;
+    static int rod2Price = 1000;
+    static int rod3Price = 3000;
 
     bool rod1Bought = false;
     bool rod2Bought = false;
@@ -116,16 +116,30 @@ public class ShopBuy : MonoBehaviour
         rod1priceText = Instantiate(textPrefab);
         rod1priceText.transform.position = rod1parent.transform.position + new Vector3(1, 1);
         rod1priceText.transform.parent = rod1parent.transform;
-        rod1priceText.GetComponent<TMP_Text>().text = "$" + rod1Price;
+        if (rodTier < 1)
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "$" + rod1Price;
+        }
+        else
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "bought";
+        }
 
-        //rod2text
-        rod2text = Instantiate(textPrefab);
+            //rod2text
+            rod2text = Instantiate(textPrefab);
         rod2text.transform.position = rod2parent.transform.position + new Vector3(0, 0.25f);
         rod2text.GetComponent<TMP_Text>().text = "tier 2 rod";
         rod2text.transform.parent = rod2parent.transform;
         rod2priceText = Instantiate(textPrefab);
         rod2priceText.transform.position = rod2parent.transform.position + new Vector3(1, 1);
-        rod2priceText.GetComponent<TMP_Text>().text = "$" + rod2Price;
+        if (rodTier < 2)
+        {
+            rod2priceText.GetComponent<TMP_Text>().text = "$" + rod2Price;
+        }
+        else
+        {
+            rod2priceText.GetComponent<TMP_Text>().text = "bought";
+        }
         rod2priceText.transform.parent = rod2parent.transform;
 
         //rod3text
@@ -135,7 +149,14 @@ public class ShopBuy : MonoBehaviour
         rod3text.transform.parent = rod3parent.transform;
         rod3priceText = Instantiate(textPrefab);
         rod3priceText.transform.position = rod3parent.transform.position + new Vector3(1, 1);
-        rod3priceText.GetComponent<TMP_Text>().text = "$" + rod3Price;
+        if (rodTier < 3)
+        {
+            rod3priceText.GetComponent<TMP_Text>().text = "$" + rod3Price;
+        }
+        else
+        {
+            rod3priceText.GetComponent<TMP_Text>().text = "bought";
+        }
         rod3priceText.transform.parent = rod3parent.transform;
 
         //selector
@@ -146,6 +167,34 @@ public class ShopBuy : MonoBehaviour
         selectorObj.transform.parent = bg.transform;
         selectorObj.transform.localScale = new Vector3(4, 2);
 
+    }
+
+    public static void reloadShopBuy()
+    {
+        if (rodTier == 0)
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "$" + rod1Price;
+            rod2priceText.GetComponent<TMP_Text>().text = "$" + rod2Price;
+            rod3priceText.GetComponent<TMP_Text>().text = "$" + rod3Price;
+        }
+        else if (rodTier == 1)
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "bought";
+            rod2priceText.GetComponent<TMP_Text>().text = "$" + rod2Price;
+            rod3priceText.GetComponent<TMP_Text>().text = "$" + rod3Price;
+        }
+        else if (rodTier == 2)
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "bought";
+            rod2priceText.GetComponent<TMP_Text>().text = "bought";
+            rod3priceText.GetComponent<TMP_Text>().text = "$" + rod3Price;
+        }
+        else if (rodTier == 3)
+        {
+            rod1priceText.GetComponent<TMP_Text>().text = "bought";
+            rod2priceText.GetComponent<TMP_Text>().text = "bought";
+            rod3priceText.GetComponent<TMP_Text>().text = "bought";
+        }
     }
 
     private void Update()
