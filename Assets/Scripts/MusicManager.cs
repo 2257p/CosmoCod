@@ -8,29 +8,18 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
+        if (Instance != null) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        GetComponent<AudioSource>().volume = 0.5f;
+        float savedVolume = PlayerPrefs.GetFloat("Volume", 0.5f);
+        GetComponent<AudioSource>().volume = savedVolume * savedVolume;
     }
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
-        if (!audioSource.isPlaying)
-        {
-            audioSource.clip = MainTheme;
-            audioSource.Play();
-        }
+        if (!audioSource.isPlaying) { audioSource.clip = MainTheme; audioSource.Play(); }
     }
 }
