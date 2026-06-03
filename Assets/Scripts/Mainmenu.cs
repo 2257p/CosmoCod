@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("CC Planet");
+        SceneManager.LoadScene("TestScene");
     }
 
     public void Option()
