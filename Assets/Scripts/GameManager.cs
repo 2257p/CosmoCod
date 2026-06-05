@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,12 +18,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame)
+       
+        if (Input.anyKeyDown)
         {
-            if (isPaused)
-                ResumeGame();
-            else
-                PauseGame();
+            Debug.Log("A key was pressed");
         }
     }
 
@@ -40,8 +39,11 @@ public class GameManager : MonoBehaviour
         DigitalClock.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
-    }  
-
+    }
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MAINMENU");
+    }
     public static bool getIsPaused()
     {
         return isPaused;
@@ -51,4 +53,5 @@ public class GameManager : MonoBehaviour
     {
         return Math.Ceiling(500 * Math.Pow(1.20, days));
     }
+
 }
