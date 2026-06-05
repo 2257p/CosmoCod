@@ -90,12 +90,19 @@ public class InventoryLoader : MonoBehaviour
             {
                 inventoryOpen = true;
                 inventoryBg.transform.position = player.transform.position + new Vector3(-2, 0);
+                Player.selectorX = 0;
+                Player.selectorY = 0;
+                inventoryFishSelector.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2);
 
             }
             else if (Player.inCutscene == false && inventoryOpen == true && Shop.inShop == false)
             {
                 inventoryOpen = false;
                 inventoryBg.transform.position = player.transform.position + new Vector3(100, 100);
+                Player.selectorX = 0;
+                Player.selectorY = 0;
+                inventoryFishSelector.transform.position = inventoryBg.transform.position + new Vector3(-0.5f, 2);
+
             }
         }
 
@@ -128,7 +135,7 @@ public class InventoryLoader : MonoBehaviour
         inventoryTitle.GetComponent<TMP_Text>().text = "Inventory";
     }
 
-    void SortingButtonDetect()
+    public static void SortingButtonDetect()
     {
         if(Player.selectorX == 2 && Player.selectorY == 1 && Keyboard.current[Player.interactKey].wasPressedThisFrame)
         {

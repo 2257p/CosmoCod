@@ -62,10 +62,14 @@ public class Player : MonoBehaviour
                 InventoryLoader.inventoryOpen == false && ShopBuy.inShopBuy == false)
             {
                 Shop.Interact();
+                selectorX = 0;
+                selectorY = 0;
+                InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
+
             }
 
             //when opening shop buy
-            if(inShopArea == false && Shop.inShop == false && inShopBuyArea == true && ShopBuy.inShopBuy == false && InventoryLoader.inventoryOpen == false)
+            if (inShopArea == false && Shop.inShop == false && inShopBuyArea == true && ShopBuy.inShopBuy == false && InventoryLoader.inventoryOpen == false)
             {
                 ShopBuy.inShopBuy = true;
                 ShopBuy.OpenShopBuy();
@@ -81,6 +85,10 @@ public class Player : MonoBehaviour
              && Shop.inShop == true)
         {
             Shop.CloseShop();
+            selectorX = 0;
+            selectorY = 0;
+            InventoryLoader.inventoryFishSelector.transform.position = InventoryLoader.inventoryBg.transform.position + new Vector3(-0.5f, 2);
+
         }
 
         //when in shop buy, close it
