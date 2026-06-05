@@ -36,10 +36,13 @@ public class ShopBuy : MonoBehaviour
     public static GameObject rod3parent;
     public static GameObject rod1text;
     public static GameObject rod1priceText;
+    public static GameObject rod1Spr;
     public static GameObject rod2text;
     public static GameObject rod2priceText;
+    public static GameObject rod2Spr;
     public static GameObject rod3text;
     public static GameObject rod3priceText;
+    public static GameObject rod3Spr;
 
     public static void InteractShopBuy()
     {
@@ -110,8 +113,8 @@ public class ShopBuy : MonoBehaviour
 
         //rod1text
         rod1text = Instantiate(textPrefab);
-        rod1text.transform.position = rod1parent.transform.position + new Vector3(0, 0.25f);
-        rod1text.GetComponent<TMP_Text>().text = "tier 1 rod";
+        rod1text.transform.position = rod1parent.transform.position + new Vector3(0.7f, 0.25f);
+        rod1text.GetComponent<TMP_Text>().text = "good rod";
         rod1text.transform.parent = rod2parent.transform;
         rod1priceText = Instantiate(textPrefab);
         rod1priceText.transform.position = rod1parent.transform.position + new Vector3(1, 1);
@@ -127,8 +130,8 @@ public class ShopBuy : MonoBehaviour
 
             //rod2text
             rod2text = Instantiate(textPrefab);
-        rod2text.transform.position = rod2parent.transform.position + new Vector3(0, 0.25f);
-        rod2text.GetComponent<TMP_Text>().text = "tier 2 rod";
+        rod2text.transform.position = rod2parent.transform.position + new Vector3(0.8f, 0.25f);
+        rod2text.GetComponent<TMP_Text>().text = "great rod";
         rod2text.transform.parent = rod2parent.transform;
         rod2priceText = Instantiate(textPrefab);
         rod2priceText.transform.position = rod2parent.transform.position + new Vector3(1, 1);
@@ -144,8 +147,8 @@ public class ShopBuy : MonoBehaviour
 
         //rod3text
         rod3text = Instantiate(textPrefab);
-        rod3text.transform.position = rod3parent.transform.position + new Vector3(0, 0.25f);
-        rod3text.GetComponent<TMP_Text>().text = "tier 3 rod";
+        rod3text.transform.position = rod3parent.transform.position + new Vector3(0.75f, 0.25f);
+        rod3text.GetComponent<TMP_Text>().text = "godrod";
         rod3text.transform.parent = rod3parent.transform;
         rod3priceText = Instantiate(textPrefab);
         rod3priceText.transform.position = rod3parent.transform.position + new Vector3(1, 1);
@@ -163,10 +166,34 @@ public class ShopBuy : MonoBehaviour
         selectorObj = new GameObject("shop selector");
         selectorObj.AddComponent<SpriteRenderer>();
         selectorObj.GetComponent<SpriteRenderer>().sprite = inventorySelector;
+        selectorObj.GetComponent<SpriteRenderer>().sortingOrder = 1;
         selectorObj.transform.position = rod1parent.transform.position + new Vector3(0, 0.6f);
         selectorObj.transform.parent = bg.transform;
         selectorObj.transform.localScale = new Vector3(4, 2);
 
+        //rod1 sprite
+        rod1Spr = new GameObject("rod1spr");
+        rod1Spr.AddComponent<SpriteRenderer>();
+        rod1Spr.GetComponent<SpriteRenderer>().sprite = rod1;
+        rod1Spr.transform.position = rod1parent.transform.position + new Vector3(-0.75f, 0.5f);
+        rod1Spr.transform.localScale = new Vector3(3, 3);
+        rod1Spr.transform.parent = rod1parent.transform;
+
+        //rod2 sprite
+        rod2Spr = new GameObject("rod2spr");
+        rod2Spr.AddComponent<SpriteRenderer>();
+        rod2Spr.GetComponent<SpriteRenderer>().sprite = rod2;
+        rod2Spr.transform.position = rod2parent.transform.position + new Vector3(-0.75f, 0.5f);
+        rod2Spr.transform.localScale = new Vector3(3, 3);
+        rod2Spr.transform.parent = rod2parent.transform;
+
+        //rod3 sprite
+        rod3Spr = new GameObject("rod3spr");
+        rod3Spr.AddComponent<SpriteRenderer>();
+        rod3Spr.GetComponent<SpriteRenderer>().sprite = rod3;
+        rod3Spr.transform.position = rod3parent.transform.position + new Vector3(-0.75f, 0.5f);
+        rod3Spr.transform.localScale = new Vector3(3, 3);
+        rod3Spr.transform.parent = rod3parent.transform;
     }
 
     public static void reloadShopBuy()

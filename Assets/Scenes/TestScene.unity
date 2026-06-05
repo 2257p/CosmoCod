@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &96845269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,9 +1499,9 @@ MonoBehaviour:
   textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
   inventoryBg: {fileID: 8325879995716491040, guid: 5babff0cc0750784d9f3637c1f29556b, type: 3}
   inventorySelector: {fileID: -7080672682304697635, guid: c3e370d0b998bb94bbf4eae69bf195f6, type: 3}
-  rod1: {fileID: 0}
-  rod2: {fileID: 0}
-  rod3: {fileID: 0}
+  rod1: {fileID: 4962811109720673959, guid: 063a427e0c75d436d903b1a46c2926a9, type: 3}
+  rod2: {fileID: -2570692931930261186, guid: 93a68e6c07820416b99e33c78aed6d64, type: 3}
+  rod3: {fileID: 1430303805151405070, guid: 4cf8766a078ac473da3fead1f6c35dfb, type: 3}
 --- !u!212 &316403720
 SpriteRenderer:
   serializedVersion: 2
@@ -10410,6 +10410,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce453efda78802347b49940629df4ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuotaDisplay
+--- !u!1 &1528100742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528100744}
+  - component: {fileID: 1528100743}
+  m_Layer: 0
+  m_Name: saveandloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1528100743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528100742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718998d334b3674aab2ff3cad430821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveLoadTest
+  textPrefab: {fileID: 6073748429772964157, guid: 82d241d214bf6cd4b931a614ae0591f3, type: 3}
+--- !u!4 &1528100744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528100742}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.85763, y: -0.08836007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528567376
 GameObject:
   m_ObjectHideFlags: 0
@@ -15295,16 +15340,17 @@ SceneRoots:
   - {fileID: 1531605688}
   - {fileID: 910297296}
   - {fileID: 1285476038}
+  - {fileID: 1528100744}
+  - {fileID: 442726409}
+  - {fileID: 361511847}
   - {fileID: 1869486549}
   - {fileID: 1477127056}
   - {fileID: 1103741324}
   - {fileID: 1291488594}
-  - {fileID: 442726409}
+  - {fileID: 316403721}
   - {fileID: 176111708}
   - {fileID: 1937234439}
   - {fileID: 1576707480}
   - {fileID: 1081397243}
   - {fileID: 218908281}
-  - {fileID: 361511847}
-  - {fileID: 316403721}
   - {fileID: 96845272}

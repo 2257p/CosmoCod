@@ -25,7 +25,7 @@ public class SaveLoadFile
     {
         SaveLoadFile save = new SaveLoadFile();
 
-        //still need to add day
+        save.day = TimeManager.dayCount;
         save.money = Inventory.money;
         save.numberOfFish = Inventory.numberOfFish;
         save.rodTier = ShopBuy.rodTier;
@@ -54,6 +54,7 @@ public class SaveLoadFile
 
             Inventory.money = save.money;
             Inventory.numberOfFish = save.numberOfFish;
+            TimeManager.dayCount = save.day;
 
             //rodtier and shopbuy stuff
             ShopBuy.rodTier = save.rodTier;
