@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Actualgamescene");
+        SceneManager.LoadScene("TestScene");
     }
 
     public void Option()
